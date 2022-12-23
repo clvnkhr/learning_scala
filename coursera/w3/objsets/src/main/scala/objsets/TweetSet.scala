@@ -166,9 +166,15 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet:
     right.foreach(f)
 
   def union(that: TweetSet): TweetSet =
-    left.union(that.incl(elem)).union(right)
+    left.union(right).union(that).incl(elem)
   
-  def mostRetweeted: Tweet = ???
+  def mostRetweeted: Tweet = 
+    if tw.retweets < elem.retweets then
+      NonEmpty(elem, left.remove(tw), right)
+    else if elem.text < tw.text then
+      NonEmpty(elem, left, right.remove(tw))
+    else
+      elem
 
 trait TweetList:
   def head: Tweet
