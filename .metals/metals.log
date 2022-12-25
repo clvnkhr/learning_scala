@@ -47,3 +47,36 @@ class Tweet(val user: String, val text: String, val retweets: Int):
 2022.12.23 20:05:35 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
 2022.12.23 20:05:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
 2022.12.23 20:07:08 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
+2022.12.23 21:04:18 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
+Dec 23, 2022 9:04:42 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.12.23 21:08:12 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/build.sbt
+2022.12.23 21:08:17 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/assignment.sbt
+2022.12.23 21:14:39 INFO  
+2022.12.23 21:14:39 INFO  Template applied in /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/./trying-to-make-metals-work
+2022.12.23 21:14:39 INFO  
+2022.12.23 21:14:39 INFO  time: ran 'giter8.Giter8' in 7.82s
+2022.12.23 21:15:13 INFO  
+2022.12.23 21:15:13 INFO  Template applied in /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/trying-to-make-metals-work/./scala3
+2022.12.23 21:15:13 INFO  
+2022.12.23 21:15:13 INFO  time: ran 'giter8.Giter8' in 6.38s
+2022.12.23 21:22:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
+2022.12.23 21:22:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w3/objsets/src/main/scala/objsets/TweetSet.scala
+2022.12.23 21:24:54 INFO  shutting down Metals
+2022.12.25 12:28:25 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.25 12:28:26 INFO  logging to file /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/.metals/metals.log
+2022.12.25 12:28:26 INFO  Started: Metals version 0.11.9 in workspace '/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala' for client Visual Studio Code 1.74.2.
+2022.12.25 12:28:28 INFO  time: initialize in 1.95s
+2022.12.25 12:28:30 WARN  Build server is not auto-connectable.
+2022.12.25 12:28:30 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.12.25 12:30:15 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:30:20 INFO  no build target found for /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.25 12:30:24 INFO  time: code lens generation in 8.15s
+2022.12.25 12:30:33 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:30:37 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:30:59 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:31:04 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:31:05 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:31:11 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:31:12 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.25 12:31:20 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
