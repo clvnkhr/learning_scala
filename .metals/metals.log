@@ -3530,3 +3530,8 @@ trait Huffman extends HuffmanInterface:
 Dec 26, 2022 10:41:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 26219
 2022.12.26 22:41:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 23:00:05 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 23:00:05 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 23:00:23 INFO  shutting down Metals
