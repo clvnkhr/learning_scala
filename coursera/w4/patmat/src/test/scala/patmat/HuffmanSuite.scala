@@ -9,9 +9,10 @@ class HuffmanSuite extends munit.FunSuite:
   }
 
 
-  test("weight of a larger tree (10pts)") {
+  test("weight of trees (10pts)") {
     new TestTrees:
       assertEquals(weight(t1), 5)
+      assertEquals(weight(t2), 9)
   }
 
 
@@ -20,7 +21,7 @@ class HuffmanSuite extends munit.FunSuite:
       assertEquals(chars(t2), List('a','b','d'))
   }
 
-  test("string2chars hello world") {
+  test("string2chars of hello world") {
     assertEquals(string2Chars("hello, world"), List('h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd'))
   }
 
@@ -38,9 +39,12 @@ class HuffmanSuite extends munit.FunSuite:
 
   test("decode and encode a very short text should be identity (10pts)") {
     new TestTrees:
-      assertEquals(decode(t1, encode(t1)("ab".toList)), "ab".toList)
+      assertEquals(decode(t1, encode(t1)("ab".toList)), string2Chars("ab"))
   }
 
+  test("decodedSecret is huffmanestcool") {
+    assertEquals(decodedSecret, string2Chars("huffmanestcool"))
+  }
 
   import scala.concurrent.duration.*
   override val munitTimeout = 10.seconds
