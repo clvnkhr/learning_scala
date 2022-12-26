@@ -3233,3 +3233,300 @@ trait Huffman extends HuffmanInterface:
 trait Huffman extends HuffmanInterface: 
                                       ^
 2022.12.26 22:04:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:06:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:07:18 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:00 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:03 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:14 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:16 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:20 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:22 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:21: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:08:22 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:31 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:21: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:08:31 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:49 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:51 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:08:58 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:09:01 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:21: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:09:01 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:10:57 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:11:00 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:11:02 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:11:13 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:21: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:11:13 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:11:45 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:21: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:11:46 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:16 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:19 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:26 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:23: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:12:26 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:47 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:48 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:12:48 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:57 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:12:59 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:13:03 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:13:03 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:13:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:13:49 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:13:49 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:15 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:17 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:18 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:28 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:31 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:14:31 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:41 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:14:41 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:43 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:14:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:14:59 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:14:59 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:15:50 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:15:50 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+Dec 26, 2022 10:15:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24678
+2022.12.26 22:15:50 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:15:56 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:15:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:16:18 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:16:22 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:16:22 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:16:45 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:16:45 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:06 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:15 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:36 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:51 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:53 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:18:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:19:05 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:19:06 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:19:08 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:20:05 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:20:05 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:21:52 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:21:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:22:11 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:17 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:22:17 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:30 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:22:30 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:33 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:35 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:38 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:38 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:22:38 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:56 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:22:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:22:59 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:23:00 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:23:00 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:31 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:32 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:24:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:44 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:46 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:47 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:24:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:01 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+Dec 26, 2022 10:25:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25248
+2022.12.26 22:25:11 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:14 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:19 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+Dec 26, 2022 10:25:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25307
+2022.12.26 22:25:22 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:29 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:25:29 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:37 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:38 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:51 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:53 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:25:53 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:25:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:26:45 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:26:47 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:26:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:26:53 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:27:00 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:27:23 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:27:23 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:27:39 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:27:48 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+Dec 26, 2022 10:27:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25630
+2022.12.26 22:27:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:27:53 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:27:58 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:01 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:07 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:12 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:24 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:45 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:46 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:51 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:28:56 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:29:01 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:29:05 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:29:05 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:30:35 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:30:35 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:30:42 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:30:42 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:32:22 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:32:22 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:32:43 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:32:43 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:28 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:33:28 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:50 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:53 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:54 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:33:59 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:33:59 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:34:31 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:34:31 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:34:39 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:34:39 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:34:40 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:34:40 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:34:48 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:34:48 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:35:00 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:35:00 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:35:15 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:35:15 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:35:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:35:55 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:35:55 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:36:06 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:36:06 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:36:12 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:36:12 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:37:04 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:37:04 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:37:04 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:37:19 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:37:19 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:37:44 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:37:44 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:37:44 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:37:52 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala:3: error: [dialect scala213] ; expected but : found
+class HuffmanSuite extends munit.FunSuite:
+                                         ^
+2022.12.26 22:37:52 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/test/scala/patmat/HuffmanSuite.scala
+2022.12.26 22:41:32 ERROR scalafmt: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala:22: error: [dialect scala213] ; expected but : found
+trait Huffman extends HuffmanInterface: 
+                                      ^
+2022.12.26 22:41:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+2022.12.26 22:41:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala
+Dec 26, 2022 10:41:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26219
+2022.12.26 22:41:32 WARN  no build target for: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera/w4/patmat/src/main/scala/patmat/Huffman.scala

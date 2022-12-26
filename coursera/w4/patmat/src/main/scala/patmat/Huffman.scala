@@ -1,5 +1,6 @@
 package patmat
 
+import scala.annotation.tailrec
 /**
  * A huffman code is represented by a binary tree.
  *
@@ -156,8 +157,8 @@ trait Huffman extends HuffmanInterface:
   def decode(tree: CodeTree, bits: List[Bit]): List[Char] =
     decode1(tree, bits, Nil, tree)
 
-
-  def decode1(tree: CodeTree, bits: List[Bit], acc: List[Char], path: CodeTree): List[Char] =
+  @tailrec
+  private def decode1(tree: CodeTree, bits: List[Bit], acc: List[Char], path: CodeTree): List[Char] =
     if bits.isEmpty && path == tree then acc.reverse
     else path match
       case Fork(left, right, _, _) =>
@@ -194,30 +195,21 @@ trait Huffman extends HuffmanInterface:
    * into a sequence of bits.
    */
   def encode(tree: CodeTree)(text: List[Char]): List[Bit] = 
-    encode1(tree,Nil, tree)(text)
+    encode1(tree, tree)(text, Nil)
   
-  def encode1(tree: CodeTree, acc: List[Bit], path: CodeTree)(text: List[Char]): List[Bit] =
+  @tailrec
+  private def encode1(tree: CodeTree, path: CodeTree)(text: List[Char], acc: List[Bit]): List[Bit] =
     if text.isEmpty && path == tree then acc.reverse
     else path match
       case Fork(left, right, _, _) => 
         val (next, bit) = if chars(left).contains(text.head) then (left,0) else (right,1)
-        encode1(tree, bit :: acc, next)(text)
-      case Leaf(char, _) => encode1(tree, acc, tree)(text.tail)
+        encode1(tree, next)(text, bit :: acc)
+      case Leaf(char, _) => encode1(tree, tree)(text.tail, acc)
       case _ => throw new IllegalArgumentException
 
   // Part 4b: Encoding using code table
 
   type CodeTable = List[(Char, List[Bit])]
-
-  extension (bits: List[Bit])
-    def <(bobs: => List[Bit]): Boolean = 
-      // lexicographic order
-    if bits.isEmpty then true
-    else if bobs.isEmpty then false
-    else
-      if bits.head != bobs.head then 
-        bits.head < bobs.head 
-      else bits.tail < bobs.tail
 
 
   /**
@@ -260,11 +252,12 @@ trait Huffman extends HuffmanInterface:
    * and then uses it to perform the actual encoding.
    */
   def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = 
-    quickEncode1(convert(tree))(text)
-
-  def quickEncode1(table: CodeTable)(text: List[Char]): List[Bit] =
+    quickEncode1(convert(tree))(text, Nil)
+  
+  @tailrec
+  def quickEncode1(table: CodeTable)(text: List[Char], acc: List[Bit]): List[Bit] =
     text match
-      case Nil => Nil
-      case x :: xs => quickEncode1(table)(xs) ::: codeBits(table)(x)
+      case Nil => acc
+      case x :: xs => quickEncode1(table)(xs, acc ::: (codeBits(table)(x)))
 
 object Huffman extends Huffman
