@@ -255,7 +255,7 @@ trait Huffman extends HuffmanInterface:
     quickEncode1(convert(tree))(text, Nil)
   
   @tailrec
-  def quickEncode1(table: CodeTable)(text: List[Char], acc: List[Bit]): List[Bit] =
+  private def quickEncode1(table: CodeTable)(text: List[Char], acc: List[Bit]): List[Bit] =
     text match
       case Nil => acc
       case x :: xs => quickEncode1(table)(xs, acc ::: (codeBits(table)(x)))
