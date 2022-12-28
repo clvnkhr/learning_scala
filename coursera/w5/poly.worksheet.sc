@@ -13,7 +13,7 @@ class Polynom(nonZeroTerms: Map[Int, Double]):
     this + (- other)
 
   def pprint(s: String): List[String] = 
-    if s.isEmpty then "" :: Nil
+    if s.isEmpty then Nil
     else 
       if s.head == '-' then 
         "-" :: s.tail :: Nil 
@@ -31,9 +31,6 @@ class Polynom(nonZeroTerms: Map[Int, Double]):
     termStrings match
       case Nil => "0"
       case head :: next => (head :: next.flatMap(pprint)).mkString(" ")
-
-
-    
 
 
   // override def toString =
@@ -68,8 +65,8 @@ p1 - p3
 
 // note though that it is now impossible to create Polynomials explicitly with Map[Int, Int]:
 
-// val p4 = Polynom(Map(3->1)) 
+// val p4 = Polynom(Map(3->1)) // WHY?
 
-// WHY?
+val p4 = Polynom(Map(3->1.2)) // WHY???
 
- val p4 = Polynom(Map(3->1.0)) // WHY???
+p3 - p3 

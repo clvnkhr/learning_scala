@@ -30402,3 +30402,43 @@ value :: is not a member of String
 2022.12.28 16:43:13 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.36s
 Dec 28, 2022 4:43:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 2122
+2022.12.28 16:54:57 ERROR scalafmt: <input>:1: error: [dialect scala213] ; expected but : found
+class Polynom(nonZeroTerms: Map[Int, Double]):
+                                             ^
+2022.12.28 16:58:19 ERROR scalafmt: <input>:1: error: [dialect scala213] ; expected but : found
+class Polynom(nonZeroTerms: Map[Int, Double]):
+                                             ^
+2022.12.28 16:58:30 ERROR scalafmt: <input>:1: error: [dialect scala213] ; expected but : found
+class Polynom(nonZeroTerms: Map[Int, Double]):
+                                             ^
+2022.12.28 17:00:13 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.32s
+Dec 28, 2022 5:07:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.12.28 17:14:34 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.36s
+2022.12.28 17:14:36 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.35s
+2022.12.28 17:14:38 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.35s
+[31merror[39m: coursera/w5/poly.worksheet.sc:30:19: identifier expected but } found
+        s"${coeff:}$exponent"
+                  ^
+2022.12.28 17:14:57 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.15s
+[31merror[39m: coursera/w5/poly.worksheet.sc:30:13: 
+Found:    (coeff : Double)
+Required: (3.0d : Double)
+        s"${coeff:03d}$exponent"
+            ^^^^^
+2022.12.28 17:14:59 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.21s
+2022.12.28 17:15:08 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.45s
+2022.12.28 17:18:12 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.36s
+2022.12.28 17:18:27 INFO  shutting down Metals
+2022.12.28 17:18:28 ERROR Unexpected error initializing serverorg.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
