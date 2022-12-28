@@ -30331,3 +30331,74 @@ for disambiguation.
 class Polynom(nonZeroTerms: Map[Int, Double]):
                                              ^
 2022.12.28 16:40:40 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.37s
+2022.12.28 16:41:48 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.35s
+2022.12.28 16:41:50 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.35s
+[31merror[39m: coursera/w5/poly.worksheet.sc:16:23: 
+Found:    ("" : String)
+Required: List[String]
+    if s.isEmpty then ""
+                      ^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:29: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                            ^^^^^^^^^^^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:47: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                                              ^^^^^^^
+2022.12.28 16:41:54 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.18s
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:29: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                            ^^^^^^^^^^^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:47: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                                              ^^^^^^^
+2022.12.28 16:42:00 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.21s
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:29: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                            ^^^^^^^^^^^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:47: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" + s.tail else "+" + s   
+                                              ^^^^^^^
+2022.12.28 16:42:01 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.32s
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:33: 
+value :: is not a member of String
+      if s.head == '-' then "-" :: s.tail else "+" + s   
+                                ^^^^^^^^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:48: 
+Found:    String
+Required: List[String]
+      if s.head == '-' then "-" :: s.tail else "+" + s   
+                                               ^^^^^^^
+2022.12.28 16:42:14 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.17s
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:33: 
+value :: is not a member of String
+      if s.head == '-' then "-" :: s.tail else "+" :: s   
+                                ^^^^^^^^^
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:52: 
+value :: is not a member of String
+      if s.head == '-' then "-" :: s.tail else "+" :: s   
+                                                   ^^^^
+2022.12.28 16:42:17 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.27s
+[31merror[39m: coursera/w5/poly.worksheet.sc:18:59: 
+value :: is not a member of String
+      if s.head == '-' then "-" :: s.tail :: Nil else "+" :: s   
+                                                          ^^^^
+2022.12.28 16:42:44 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.15s
+2022.12.28 16:42:47 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.31s
+2022.12.28 16:42:49 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.41s
+2022.12.28 16:42:51 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.32s
+2022.12.28 16:42:53 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.34s
+2022.12.28 16:43:13 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 0.36s
+Dec 28, 2022 4:43:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2122

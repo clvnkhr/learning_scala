@@ -12,10 +12,12 @@ class Polynom(nonZeroTerms: Map[Int, Double]):
   def - (other: Polynom): Polynom = 
     this + (- other)
 
-  def pprint(s: String): String = 
-    if s.isEmpty then ""
+  def pprint(s: String): List[String] = 
+    if s.isEmpty then "" :: Nil
     else 
-      if s.head == '-' then "- " + s.tail else "+ " + s   
+      if s.head == '-' then 
+        "-" :: s.tail :: Nil 
+      else "+" :: s :: Nil
 
   override def toString =
     val termStrings =
@@ -28,7 +30,7 @@ class Polynom(nonZeroTerms: Map[Int, Double]):
         s"${coeff}$exponent"
     termStrings match
       case Nil => "0"
-      case head :: next => (head :: next.map(pprint)).mkString(" ")
+      case head :: next => (head :: next.flatMap(pprint)).mkString(" ")
 
 
     
