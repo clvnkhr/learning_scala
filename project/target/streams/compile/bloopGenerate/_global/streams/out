@@ -1,0 +1,4 @@
+[debug] [learning_scala-build] Classpath dependencies List()
+[debug] [learning_scala-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'learning_scala-build' to '/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/project/.bloop/learning_scala-build.json'
+[success] Generated .bloop/learning_scala-build.json
