@@ -60,3 +60,5 @@ def rewrite2(k: Int) =
     case _ => "FizzBuzz"
 
 rewrite2(15)
+
+(1 until 1000).filter(i => i%3==0 || i%5==0).sum
