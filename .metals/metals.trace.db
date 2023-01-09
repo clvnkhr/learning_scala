@@ -542,3 +542,98 @@ Caused by: java.sql.SQLException: OutOfMemoryError
 	... 22 more
 Caused by: java.lang.OutOfMemoryError
 	... 23 more
+2023-01-09 12:17:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Out of memory. [90108-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.engine.Database.throwLastBackgroundException(Database.java:1782)
+	at org.h2.engine.SessionLocal.beforeCommitOrRollback(SessionLocal.java:754)
+	at org.h2.engine.SessionLocal.commit(SessionLocal.java:668)
+	at org.h2.command.Command.stop(Command.java:157)
+	at org.h2.command.CommandContainer.stop(CommandContainer.java:259)
+	at org.h2.command.Command.executeQuery(Command.java:229)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:128)
+	at scala.meta.internal.metals.JdbcEnrichments$XtensionConnection.query(JdbcEnrichments.scala:37)
+	at scala.meta.internal.metals.DependencySources.getBuildTarget(DependencySources.scala:27)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:242)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:242)
+	at scala.meta.internal.metals.MetalsLanguageServer.didFocus(MetalsLanguageServer.scala:1203)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.message.DbException: OutOfMemoryError
+	at org.h2.message.DbException.<clinit>(DbException.java:64)
+	at org.h2.message.TraceObject.<clinit>(TraceObject.java:108)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:75)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:146)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:152)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:144)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:138)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:81)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:74)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:882)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+Caused by: java.sql.SQLException: OutOfMemoryError
+	at org.h2.message.DbException.<clinit>(DbException.java:62)
+	... 22 more
+Caused by: java.lang.OutOfMemoryError
+	... 23 more
+2023-01-09 16:41:19 database: flush
+org.h2.message.DbException: Out of memory. [90108-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:389)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3254)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Out of memory. [90108-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 6 more
+Caused by: java.lang.OutOfMemoryError: Java heap space
+2023-01-09 16:41:20 database: could not close the database
+org.h2.message.DbException: Out of memory. [90108-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.engine.Database.close(Database.java:1153)
+	at org.h2.engine.OnExitDatabaseCloser.onShutdown(OnExitDatabaseCloser.java:85)
+	at org.h2.engine.OnExitDatabaseCloser.run(OnExitDatabaseCloser.java:114)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Out of memory. [90108-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 4 more
+Caused by: org.h2.message.DbException: Out of memory. [90108-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:389)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:3254)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3775)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Out of memory. [90108-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 6 more
+Caused by: java.lang.OutOfMemoryError: Java heap space

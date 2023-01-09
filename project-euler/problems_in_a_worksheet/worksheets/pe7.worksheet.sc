@@ -1,11 +1,21 @@
-def from(n: Int): LazyList[Int] = n #:: from(n + 1)
+/* Rough estimate of the size of the 10001th prime
 
-val nat = from(1)
+There are pi(n) ~ n/log(n) primes in 1...n
+we need to find an n where n/log(n) is approximately 10001
+200000/ln(200000) = 16,385.3 too much
+100000/ln(100000) =  8,685.9 too little
+150000/ln(150000) = 12,585.6 whatever lets use it
+ */
 
-def eratosthenes(l: LazyList[Int]): LazyList[Int] =
-  l.head #:: eratosthenes(l.tail.filter(_ % l.head != 0))
+val k = 150000
+val start = (2 to k).toList
 
-val primes = eratosthenes(nat.tail)
+def sieve(unsifted: List[Int]): List[Int] =
+  def sieve1(unsifted: List[Int], acc: List[Int]): List[Int] =
+    if unsifted.isEmpty then acc.reverse
+    else
+      sieve1(unsifted.tail.filter( _ % unsifted.head != 0), unsifted.head :: acc)
+  sieve1(unsifted, Nil)
 
-// STACK OVERFLOW when running this in scala with 10001 in place of 500.
-primes(500)
+sieve(start)(10001 - 1)
+//                 ^^^ zero indexing
