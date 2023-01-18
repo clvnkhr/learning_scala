@@ -1,0 +1,4 @@
+[debug] [w9-test] Classpath dependencies List()
+[debug] [w9-test] Dependencies from configurations List(w9)
+[debug] Bloop wrote the configuration of project 'w9-test' to '/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9-test.json'
+[success] Generated .bloop/w9-test.json

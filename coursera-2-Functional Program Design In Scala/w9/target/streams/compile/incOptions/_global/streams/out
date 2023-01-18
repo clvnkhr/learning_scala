@@ -1,0 +1,2 @@
+[debug] Created transactional ClassFileManager with tempDir = /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/classes.bak
+[debug] Removing the temporary directory used for backing up class files: /Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/classes.bak

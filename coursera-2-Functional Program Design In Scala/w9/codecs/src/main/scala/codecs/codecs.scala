@@ -77,10 +77,13 @@ trait EncoderInstances:
 
   /** An encoder for `String` values */
   given Encoder[String] =
-    ??? // TODO Implement the `Encoder[String]` instance
+    Encoder.fromFunction(s => Json.Str(s))
+  // DONE Implement the `Encoder[String]` instance
 
   /** An encoder for `Boolean` values */
-  // TODO Define a given value of type `Encoder[Boolean]`
+  given Encoder[Boolean] =
+    Encoder.fromFunction(b => Json.Bool(b))
+  // DONE  Define a given value of type `Encoder[Boolean]`
 
   /**
     * Encodes a list of values of type `A` into a JSON array containing
@@ -175,12 +178,18 @@ trait DecoderInstances:
     Decoder.fromPartialFunction { case Json.Null => () }
 
   /** A decoder for `Int` values. Hint: use the `isValidInt` method of `BigDecimal`. */
-  // TODO Define a given value of type `Decoder[Int]`
+  given Decoder[Int] =
+    Decoder.fromPartialFunction { case Json.Num(n) if n.isValidInt => n.toInt }
+  // DONE Define a given value of type `Decoder[Int]`
 
   /** A decoder for `String` values */
-  // TODO Define a given value of type `Decoder[String]`
+  given Decoder[String] =
+    Decoder.fromPartialFunction { case Json.Str(s) => s }
+  // DONE Define a given value of type `Decoder[String]`
 
   /** A decoder for `Boolean` values */
+  given Decoder[Boolean] =
+    Decoder.fromPartialFunction { case Json.Bool(b) => b }
   // TODO Define a given value of type `Decoder[Boolean]`
 
   /**
@@ -190,7 +199,7 @@ trait DecoderInstances:
     */
   given [A] (using decoder: Decoder[A]): Decoder[List[A]] = 
     Decoder.fromFunction {
-      ???
+      case Json.Arr(items) => items.map(decoder.decode)
     }
 
   /**
