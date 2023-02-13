@@ -1,4 +1,4 @@
-[debug] [w9-build] Classpath dependencies List()
-[debug] [w9-build] Dependencies from configurations List()
-[debug] Bloop wrote the configuration of project 'w9-build' to '/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/project/.bloop/w9-build.json'
-[success] Generated .bloop/w9-build.json
+[0m[[0m[0mdebug[0m] [0m[0m[w9-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[w9-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'w9-build' to '/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/project/.bloop/w9-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/w9-build.json[0m

@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/Users/calvinkhor/Documents/Docs,%20PDFs/Coding/scala/learning_scala/coursera-2-Functional%20Program%20Design%20In%20Scala/w9/project/"), "w9-build")...
-[debug] Done updating ProjectRef(uri("file:/Users/calvinkhor/Documents/Docs,%20PDFs/Coding/scala/learning_scala/coursera-2-Functional%20Program%20Design%20In%20Scala/w9/project/"), "w9-build")
+[warn] sbt-1.8.0.jar no longer exists at /Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.8.0/sbt-1.8.0.jar
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating ProjectRef(uri("file:/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional%20Program%20Design%20In%20Scala/w9/project/"), "w9-build")...
+[debug] Done updating ProjectRef(uri("file:/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional%20Program%20Design%20In%20Scala/w9/project/"), "w9-build")

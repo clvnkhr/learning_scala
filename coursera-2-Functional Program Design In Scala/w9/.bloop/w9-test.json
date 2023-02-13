@@ -2,27 +2,27 @@
     "version": "1.4.0",
     "project": {
         "name": "w9-test",
-        "directory": "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9",
-        "workspaceDir": "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9",
+        "directory": "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9",
+        "workspaceDir": "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9",
         "sources": [
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala",
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala-2.12",
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala-2",
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/java",
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/src_managed/test"
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala-2.12",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/scala-2",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/java",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/src_managed/test"
         ],
         "dependencies": [
             "w9"
         ],
         "classpath": [
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9/scala-2.12/classes",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9/scala-2.12/classes",
             "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-library.jar"
         ],
-        "out": "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9",
-        "classesDir": "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9/scala-2.12/test-classes",
+        "out": "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9",
+        "classesDir": "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/.bloop/w9/scala-2.12/test-classes",
         "resources": [
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/resources",
-            "/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/resource_managed/test"
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/src/test/resources",
+            "/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/target/scala-2.12/resource_managed/test"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -34,8 +34,9 @@
             "jars": [
                 "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-library.jar",
                 "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-compiler.jar",
+                "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/jline.jar",
                 "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-reflect.jar",
-                "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-xml_2.12-2.1.0.jar"
+                "/Users/calvinkhor/.sbt/boot/scala-2.12.17/lib/scala-xml_2.12.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -105,7 +106,7 @@
             "config": {
                 "home": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
                 "options": [
-                    "-Duser.dir=/Users/calvinkhor/Documents/Docs, PDFs/Coding/scala/learning_scala/coursera-2-Functional Program Design In Scala/w9"
+                    "-Duser.dir=/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9"
                 ]
             },
             "mainClass": [
@@ -128,11 +129,6 @@
                             "name": "scala-library",
                             "classifier": "sources",
                             "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.17/scala-library-2.12.17-sources.jar"
-                        },
-                        {
-                            "name": "scala-library",
-                            "classifier": "javadoc",
-                            "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.17/scala-library-2.12.17-javadoc.jar"
                         }
                     ]
                 },
@@ -150,11 +146,6 @@
                             "name": "scala-library",
                             "classifier": "sources",
                             "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.17/scala-library-2.12.17-sources.jar"
-                        },
-                        {
-                            "name": "scala-library",
-                            "classifier": "javadoc",
-                            "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.17/scala-library-2.12.17-javadoc.jar"
                         }
                     ]
                 }
