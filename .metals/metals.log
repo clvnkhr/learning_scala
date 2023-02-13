@@ -26154,3 +26154,71 @@ SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
 Jan 10, 2023 7:27:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 11
 2023.01.10 19:31:00 INFO  shutting down Metals
+2023.02.07 17:00:43 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.07 17:00:43 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/metals.log
+2023.02.07 17:00:43 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.74.3.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.07 17:00:45 INFO  time: initialize in 1.87s
+2023.02.07 17:00:48 WARN  Build server is not auto-connectable.
+2023.02.07 17:00:48 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.02.07 17:00:51 INFO  shutting down Metals
+2023.02.09 11:34:53 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.09 11:34:54 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/metals.log
+2023.02.09 11:34:54 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.75.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.09 11:34:56 INFO  time: initialize in 1.99s
+2023.02.09 11:35:00 WARN  Build server is not auto-connectable.
+2023.02.09 11:35:00 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.02.09 11:35:00 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/Signal.scala
+2023.02.09 11:35:06 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/Signal.scala. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.09 11:35:09 INFO  time: code lens generation in 9.23s
+2023.02.09 13:31:11 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/Interfaces.scala
+2023.02.09 13:31:15 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/Polynomial.scala
+2023.02.09 13:31:17 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/Signal.scala
+2023.02.09 13:31:19 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala
+2023.02.09 14:24:46 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.09 14:24:48 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/metals.log
+2023.02.09 14:24:48 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.75.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.09 14:24:52 INFO  time: initialize in 3.88s
+2023.02.09 14:24:56 WARN  Build server is not auto-connectable.
+2023.02.09 14:24:56 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Feb 09, 2023 2:24:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.02.09 14:24:56 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala
+2023.02.09 14:25:00 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala. Using presentation compiler with project's scala-library version: 3.2.1
+Feb 09, 2023 2:25:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 09, 2023 4:17:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 11, 2023 6:44:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 11, 2023 6:44:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 11, 2023 10:28:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 12, 2023 8:23:40 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 12, 2023 7:08:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 13, 2023 7:59:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 13, 2023 6:24:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 13, 2023 7:36:53 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
