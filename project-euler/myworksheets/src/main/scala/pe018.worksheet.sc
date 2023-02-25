@@ -1,3 +1,5 @@
+// 18 Maximum path sum I
+
 val rawTri = """75
 95 64
 17 47 82
@@ -38,4 +40,3 @@ yield
   val rem = if l > 8 then 0 else 8 - l
   pathsum("0" * rem + i)
 ).max
-

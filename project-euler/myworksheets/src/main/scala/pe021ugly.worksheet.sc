@@ -1,3 +1,4 @@
+// 21 Amicable numbers
 val primes: LazyList[Int] =
   2 #:: (
     LazyList

@@ -1,3 +1,5 @@
+// 11	Largest product in a grid
+
 lazy val rawGrid =
   """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -31,23 +33,27 @@ grid.forall(_.length == l)
 val w = 4
 
 val horizontals =
-  for i <- 0 until (l - w + 1)
-  j <- 0 until l
+  for
+    i <- 0 until (l - w + 1)
+    j <- 0 until l
   yield (0 until w).map(k => grid(i + k)(j)).product
 
 val verticals =
-  for i <- 0 until l
-  j <- 0 until (l - w + 1)
+  for
+    i <- 0 until l
+    j <- 0 until (l - w + 1)
   yield (0 until w).map(k => grid(i)(j + k)).product
 
 val diagonals =
-  for i <- 0 until (l - w + 1)
-  j <- 0 until (l - w + 1)
+  for
+    i <- 0 until (l - w + 1)
+    j <- 0 until (l - w + 1)
   yield (0 until w).map(k => grid(i + k)(j + k)).product
 
 val antidiagonals =
-  for i <- 0 until (l - w + 1)
-  j <- w - 1 until l
+  for
+    i <- 0 until (l - w + 1)
+    j <- w - 1 until l
   yield (0 until w).map(k => grid(i + k)(j - k)).product
 
 (horizontals ++ verticals ++ diagonals ++ antidiagonals).max

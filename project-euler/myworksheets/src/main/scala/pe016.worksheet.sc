@@ -1,3 +1,5 @@
+//  16 Power Digit Sum
+
 import math.{log10}
 
 log10(math.pow(2, 1000))

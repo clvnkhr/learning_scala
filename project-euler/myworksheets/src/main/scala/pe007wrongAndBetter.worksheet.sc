@@ -1,3 +1,5 @@
+// 7	10001st prime
+
 def from(n: Int): LazyList[Int] = n #:: from(n + 1)
 val nat = from(1)
 def eratosthenes(l: LazyList[Int]): LazyList[Int] =

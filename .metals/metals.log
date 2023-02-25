@@ -26222,3 +26222,178 @@ Feb 13, 2023 6:24:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 Feb 13, 2023 7:36:53 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Feb 15, 2023 1:45:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:08:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:09:06 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:09:07 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:09:30 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:09:37 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:10:07 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:10:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 9:11:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.02.23 09:11:27 INFO  shutting down Metals
+2023.02.23 10:07:13 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.23 10:07:14 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/metals.log
+2023.02.23 10:07:14 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.23 10:07:16 INFO  time: initialize in 2.22s
+2023.02.23 10:07:20 WARN  Build server is not auto-connectable.
+2023.02.23 10:07:20 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.02.23 10:07:20 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala
+2023.02.23 10:07:28 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.23 10:07:32 INFO  time: code lens generation in 12s
+Feb 23, 2023 10:08:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:08:23 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:08:42 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:08:53 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:09:27 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:09:27 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:09:33 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 10:44:24 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.02.23 14:31:58 INFO  
+2023.02.23 14:31:58 INFO  Template applied in /Users/calvinkhor/Documents/GitHub/learning_scala/./scala-3-crash-course-quicknotes
+2023.02.23 14:31:58 INFO  
+2023.02.23 14:31:58 INFO  time: ran 'giter8.Giter8' in 4.41s
+Feb 23, 2023 3:02:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 23, 2023 3:03:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.02.23 15:23:34 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w11/calculator/src/main/scala/calculator/TweetLength.scala
+2023.02.23 15:36:06 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/queens.worksheet.sc
+2023.02.23 15:36:10 ERROR scalafmt: <input>:3: error: [dialect scala213] : expected but identifier found
+def queens(using n: Int): Set[Queens] =
+                 ^
+2023.02.23 15:36:10 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/queens.worksheet.sc
+2023.02.23 15:36:17 ERROR scalafmt: <input>:3: error: [dialect scala213] : expected but identifier found
+def queens(using n: Int): Set[Queens] =
+                 ^
+2023.02.23 15:36:17 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/queens.worksheet.sc
+2023.02.23 15:36:22 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/queens.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.23 15:36:22 INFO  time: evaluated worksheet 'queens.worksheet.sc' in 16s
+2023.02.23 15:36:28 INFO  time: evaluated worksheet 'queens.worksheet.sc' in 5.43s
+2023.02.23 15:36:30 INFO  time: evaluated worksheet 'queens.worksheet.sc' in 2.65s
+2023.02.23 15:36:31 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/queens.worksheet.sc
+2023.02.23 15:36:38 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/queens.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.23 15:36:38 INFO  time: evaluated worksheet 'queens.worksheet.sc' in 6.53s
+2023.02.23 15:36:40 INFO  shutting down Metals
+2023.02.25 14:15:55 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.25 14:15:56 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/metals.log
+2023.02.25 14:15:56 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.25 14:15:58 INFO  time: initialize in 1.91s
+2023.02.25 14:16:02 WARN  Build server is not auto-connectable.
+2023.02.25 14:16:02 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/queens.worksheet.sc
+2023.02.25 14:16:02 WARN  no build tool detected in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.02.25 14:16:09 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/queens.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.25 14:16:12 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+2023.02.25 14:16:13 INFO  time: code lens generation in 11s
+2023.02.25 14:16:13 INFO  time: code lens generation in 1.34s
+2023.02.25 14:16:14 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/queens.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.25 14:16:14 INFO  time: evaluated worksheet 'queens.worksheet.sc' in 12s
+2023.02.25 14:16:16 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.25 14:16:17 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 2.61s
+2023.02.25 14:16:30 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe021.worksheet.sc
+2023.02.25 14:16:35 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe021.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.25 14:16:35 INFO  time: evaluated worksheet 'pe021.worksheet.sc' in 5.81s
+2023.02.25 14:16:47 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+2023.02.25 14:16:48 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.97s
+2023.02.25 14:17:34 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:4: expected start of definition
+@an
+   ^
+2023.02.25 14:17:34 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.5s
+2023.02.25 14:17:37 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:14: expected start of definition
+@annotation.t
+             ^
+2023.02.25 14:17:37 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.59s
+2023.02.25 14:17:42 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+2023.02.25 14:17:58 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.77s
+2023.02.25 14:27:47 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("example.txt")
+                     ^^^^^^
+2023.02.25 14:27:47 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.44s
+Feb 25, 2023 2:27:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 73
+2023.02.25 14:27:59 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe22names.txt")
+                     ^^^^^^
+2023.02.25 14:27:59 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.41s
+2023.02.25 14:28:01 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe022names.txt")
+                     ^^^^^^
+2023.02.25 14:28:01 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.21s
+2023.02.25 14:28:17 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:3:24: ; expected but ) found
+bufferedSource.getLines) {
+                       ^
+2023.02.25 14:28:17 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.42s
+2023.02.25 14:28:22 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:4:1: end of file expected but } found
+}
+^
+2023.02.25 14:28:23 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.35s
+2023.02.25 14:28:24 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe022names.txt")
+                     ^^^^^^
+2023.02.25 14:28:24 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.2s
+2023.02.25 14:28:30 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe022names.txt")
+                     ^^^^^^
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:3:1: 
+Not found: valbufferedSource
+valbufferedSource.getLines.toList
+^^^^^^^^^^^^^^^^^
+2023.02.25 14:28:30 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.24s
+2023.02.25 14:28:34 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe022names.txt")
+                     ^^^^^^
+2023.02.25 14:28:35 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.17s
+2023.02.25 14:28:36 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+[31merror[39m: project-euler/myworksheets/src/main/scala/pe022.worksheet.sc:2:22: 
+Not found: Source
+val bufferedSource = Source.fromFile("pe022names.txt")
+                     ^^^^^^
+2023.02.25 14:28:36 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.14s
+2023.02.25 14:28:42 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/pe022.worksheet.sc
+2023.02.25 14:28:43 INFO  time: evaluated worksheet 'pe022.worksheet.sc' in 0.84s
+2023.02.25 14:29:05 INFO  shutting down Metals

@@ -1,3 +1,5 @@
+// 10 Summation of primes
+
 lazy val primes: LazyList[Int] =
   2 #:: LazyList
     .from(3)

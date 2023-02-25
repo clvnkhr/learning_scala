@@ -1,0 +1,4 @@
+[debug] [worksheets-build] Classpath dependencies List()
+[debug] [worksheets-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'worksheets-build' to '/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/project/.bloop/worksheets-build.json'
+[success] Generated .bloop/worksheets-build.json

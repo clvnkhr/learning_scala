@@ -1,4 +1,5 @@
-/* https://projecteuler.net/problem=19
+/* 19 Counting Sundays
+https://projecteuler.net/problem=19
 
 1 Jan 1900 was a Monday.
 Thirty days has September,

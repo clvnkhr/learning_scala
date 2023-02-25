@@ -1,3 +1,5 @@
+// 11	Largest product in a grid
+
 lazy val rawGrid =
   """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -29,15 +31,17 @@ val l = grid.length
 grid.forall(_.length == l)
 
 def gridProd(grid: List[List[Long]], ind: Seq[(Int, Int)]): Long =
-  if ind.exists((i,j) => i < 0 || j < 0 || i >= grid.length || j >= grid.length) then 1 
-  else ind.map((i,j) => grid(i)(j)).product
+  if ind.exists((i, j) =>
+      i < 0 || j < 0 || i >= grid.length || j >= grid.length
+    )
+  then 1
+  else ind.map((i, j) => grid(i)(j)).product
 
 def window(pt: (Int, Int), dir: (Int, Int), w: Int) =
-  for i <- 0 until w yield (pt(0)+ i*dir(0), pt(1) + i*dir(1))
+  for i <- 0 until w yield (pt(0) + i * dir(0), pt(1) + i * dir(1))
 
-(for 
+(for
   i <- 0 to l
   j <- 0 to l
-  direction <- List((1,0),(0,1), (1,1), (1,-1))
-yield
-  gridProd(grid, window((i,j), direction, 4))).max
+  direction <- List((1, 0), (0, 1), (1, 1), (1, -1))
+yield gridProd(grid, window((i, j), direction, 4))).max

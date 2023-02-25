@@ -1,3 +1,5 @@
+// 15 Lattice paths
+
 def numPaths(h: Int, w: Int): BigInt =
 //   if h > w then numPaths(w, h)
 //   else if h == 0 then 1L
