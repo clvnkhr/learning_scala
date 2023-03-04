@@ -1,0 +1,284 @@
+2023.02.25 23:43:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.metals/lsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.25 23:43:40 INFO  logging to file /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.metals/metals.log
+2023.02.25 23:43:40 INFO  Started: Metals version 0.11.10 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.25 23:43:41 INFO  time: initialize in 1.54s
+2023.02.25 23:43:44 INFO  Attempting to connect to the build server...
+2023.02.25 23:43:44 INFO  Running BSP server [/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java, -Xms100m, -Xmx100m, -classpath, /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.0/sbt-1.8.0.zip/sbt/bin/sbt-launch.jar, -Dsbt.script=/Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.0/sbt-1.8.0.zip/sbt/bin/sbt, xsbt.boot.Boot, -bsp]
+2023.02.25 23:43:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.02.25 23:43:44 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/metals.sbt
+2023.02.25 23:43:44 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project/metals.sbt
+2023.02.25 23:43:46 INFO  BSP server: [info] server was not detected. starting an instance
+2023.02.25 23:43:48 INFO  BSP server: [info] Updated file /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/build.properties: set sbt.version to 1.8.0
+2023.02.25 23:43:48 INFO  BSP server: [info] welcome to sbt 1.8.0 (Eclipse Adoptium Java 17.0.5)
+2023.02.25 23:43:50 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.2.1
+2023.02.25 23:43:52 INFO  BSP server: [info] loading settings for project project-euler-build-build from metals.sbt ...
+2023.02.25 23:43:54 INFO  BSP server: [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project
+2023.02.25 23:43:55 INFO  time: code lens generation in 10s
+2023.02.25 23:43:57 INFO  running '/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/xs/ys0k0ptj449_1rn77ff_pcxm0000gn/T/metals7536774596437354733/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.02.25 23:43:57 INFO  BSP server: [info] loading settings for project project-euler-build from metals.sbt ...
+2023.02.25 23:43:57 INFO  BSP server: [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project
+2023.02.25 23:43:58 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/metals.sbt
+2023.02.25 23:43:58 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project/metals.sbt
+2023.02.25 23:44:01 INFO  [info] welcome to sbt 1.8.0 (Eclipse Adoptium Java 17.0.5)
+2023.02.25 23:44:04 INFO  [info] loading settings for project project-euler-build-build from metals.sbt ...
+2023.02.25 23:44:04 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project
+2023.02.25 23:44:08 INFO  [info] loading settings for project project-euler-build from metals.sbt ...
+2023.02.25 23:44:08 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project
+2023.02.25 23:44:11 INFO  [success] Generated .bloop/project-euler-build.json
+2023.02.25 23:44:11 INFO  [success] Total time: 3 s, completed 25 Feb 2023, 23:44:11
+2023.02.25 23:44:11 INFO  [info] set current project to project-euler (in build file:/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/)
+2023.02.25 23:44:12 INFO  [success] Generated .bloop/project-euler-test.json
+2023.02.25 23:44:12 INFO  [success] Generated .bloop/project-euler.json
+2023.02.25 23:44:12 INFO  [success] Total time: 0 s, completed 25 Feb 2023, 23:44:12
+2023.02.25 23:44:12 INFO  time: ran 'sbt bloopInstall' in 15s
+2023.02.25 23:44:12 INFO  Attempting to connect to the build server...
+2023.02.25 23:44:12 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json
+2023.02.25 23:44:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.02.25 23:44:12 INFO  Attempting to connect to the build server...
+2023.02.25 23:44:12 INFO  Bloop uses /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json
+2023.02.25 23:44:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.02.25 23:44:13 INFO  time: Connected to build server in 1.01s
+2023.02.25 23:44:13 INFO  Connected to Build server: Bloop v1.5.6
+2023.02.25 23:44:14 INFO  time: Imported build in 0.2s
+2023.02.25 23:44:17 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 2.12.17
+2023.02.25 23:44:19 INFO  time: indexed workspace in 5.2s
+2023.02.25 23:44:19 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala
+2023.02.25 23:44:19 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala
+2023.02.25 23:44:19 INFO  skipping build import with status 'Installed'
+Feb 25, 2023 11:44:20 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4265)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Feb 25, 2023 11:44:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4265)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.02.25 23:44:35 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala
+Feb 25, 2023 11:44:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4265)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.02.25 23:44:38 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala
+Feb 25, 2023 11:44:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4265)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Feb 25, 2023 11:44:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fproject-euler%2Fmyworksheets%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: illegal start of definition def
+def divisors(n: Long): List[Long] =
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4265)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.02.25 23:44:44 ERROR Timeout waiting for 'build/initialize' response
+2023.02.25 23:44:44 WARN  Retrying connection to the build server sbt
+2023.02.25 23:44:44 INFO  Running BSP server [/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java, -Xms100m, -Xmx100m, -classpath, /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.0/sbt-1.8.0.zip/sbt/bin/sbt-launch.jar, -Dsbt.script=/Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.0/sbt-1.8.0.zip/sbt/bin/sbt, xsbt.boot.Boot, -bsp]
+2023.02.25 23:44:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.02.25 23:44:45 INFO  BSP server: [info] server was not detected. starting an instance
+2023.02.25 23:44:48 INFO  BSP server: [info] welcome to sbt 1.8.0 (Eclipse Adoptium Java 17.0.5)
+2023.02.25 23:44:50 INFO  BSP server: [info] loading settings for project project-euler-build-build from metals.sbt ...
+2023.02.25 23:44:51 INFO  BSP server: [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project
+2023.02.25 23:44:52 INFO  BSP server: [info] loading settings for project project-euler-build from metals.sbt ...
+2023.02.25 23:44:52 INFO  BSP server: [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project
+2023.02.25 23:44:52 INFO  BSP server: [success] Generated .bloop/project-euler-build.json
+2023.02.25 23:44:53 INFO  BSP server: [success] Total time: 1 s, completed 25 Feb 2023, 23:44:53
+2023.02.25 23:44:53 INFO  BSP server: [info] set current project to project-euler (in build file:/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/)
+2023.02.25 23:44:53 INFO  BSP server: [info] sbt server started at local:///Users/calvinkhor/.sbt/1.0/server/2f5b3ed5c36175fa2b5e/sock
+2023.02.25 23:44:54 INFO  time: Connected to build server in 1m10s
+2023.02.25 23:44:54 INFO  Connected to Build server: sbt v1.8.0
+2023.02.25 23:44:54 INFO  Processing workspace/buildTargets
+2023.02.25 23:44:54 INFO  Processing buildTarget/scalacOptions
+2023.02.25 23:44:54 INFO  Processing buildTarget/sources
+2023.02.25 23:44:54 INFO  Processing buildTarget/dependencySources
+2023.02.25 23:44:54 INFO  Processing buildTarget/jvmRunEnvironment
+2023.02.25 23:44:54 INFO  compiling project-euler
+2023.02.25 23:44:54 INFO  compiling project-euler-test
+2023.02.25 23:44:54 INFO  time: Imported build in 0.68s
+2023.02.25 23:44:58 INFO  time: indexed workspace in 3.17s
+2023.02.25 23:44:58 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2023.02.25 23:44:58 INFO  Processing buildTarget/scalaMainClasses
+2023.02.25 23:44:58 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala
+2023.02.25 23:44:58 INFO  compiling project-euler
+2023.02.25 23:44:58 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 2.12.17
+2023.02.25 23:44:58 INFO  time: compiled project-euler in 0.11s
+2023.02.25 23:44:58 INFO  compiling project-euler-test
+2023.02.25 23:44:58 INFO  time: compiled project-euler-test in 841μs
+2023.02.25 23:44:58 INFO  Processing buildTarget/scalaTestClasses
+2023.02.25 23:44:58 INFO  compiling project-euler
+2023.02.25 23:44:58 INFO  time: compiled project-euler in 6ms
+2023.02.25 23:44:58 INFO  compiling project-euler-test
+2023.02.25 23:44:58 INFO  time: compiled project-euler-test in 10ms
+2023.02.25 23:45:04 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2023.02.25 23:45:04 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/build.sbt
+2023.02.25 23:45:34 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2023.02.25 23:45:34 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/myworksheets/build.sbt
+2023.02.25 23:46:06 INFO  shutting down Metals
+2023.02.25 23:46:07 INFO  Shut down connection with build server.

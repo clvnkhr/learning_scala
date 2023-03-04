@@ -1,0 +1,136 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[info] Updated file /Users/calvinkhor/Documents/GitHub/learning_scala/project/build.properties: set sbt.version to 1.8.2
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.5)
+[debug] Load.defaultLoad until apply took 169.704508ms
+[debug]                 Load.loadUnit: plugins took 110.792404ms
+[debug]                 Load.loadUnit: defsScala took 1.021785ms
+[debug] [Loading] Scanning directory /Users/calvinkhor/Documents/GitHub/learning_scala/project/project
+[debug]                   Load.loadUnit: mkEval took 16.23079ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 25.911482 ms
+[info] loading settings for project learning_scala-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(learning_scala-build-build) took 122.701683ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id learning_scala-build-build, base: /Users/calvinkhor/Documents/GitHub/learning_scala/project/project, plugins: List(<none>))) took 168.130045ms
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project/project, returning: (learning_scala-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 6722.853266ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 13.947343ms
+[debug]               Load.loadUnit(file:/Users/calvinkhor/Documents/GitHub/learning_scala/project/project/, ...) took 6859.817235ms
+[debug]             Load.apply: load took 7423.81848ms
+[debug]             Load.apply: resolveProjects took 6.393906ms
+[debug]             Load.apply: finalTransforms took 80.829866ms
+[debug]             Load.apply: config.delegates took 9.452047ms
+[debug]             Load.apply: Def.make(settings)... took 609.465903ms
+[debug]             Load.apply: structureIndex took 210.468286ms
+[debug]             Load.apply: mkStreams took 2.827601ms
+[info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 11182.509546ms
+[debug]           Load.loadUnit: defsScala took 0.013784ms
+[debug] [Loading] Scanning directory /Users/calvinkhor/Documents/GitHub/learning_scala/project
+[debug]             Load.loadUnit: mkEval took 0.321839ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(metals.MetalsPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(org.scaladebugger.SbtJdiTools),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(metals.MetalsPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.scaladebugger.SbtJdiTools))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,org.scaladebugger.SbtJdiTools,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin,metals.MetalsPlugin)
+[debug] Plugins.deducer#function took 5.552775 ms
+[info] loading settings for project learning_scala-build from metals.sbt ...
+[debug]               Load.resolveProject(learning_scala-build) took 9.10633ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id learning_scala-build, base: /Users/calvinkhor/Documents/GitHub/learning_scala/project, plugins: List(<none>))) took 15.740416ms
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project, returning: (learning_scala-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1849.412169ms
+[debug]           Load.loadUnit: cleanEvalClasses took 2.019736ms
+[debug]         Load.loadUnit(file:/Users/calvinkhor/Documents/GitHub/learning_scala/project/, ...) took 13035.687451ms
+[debug]       Load.apply: load took 13040.526686ms
+[debug]       Load.apply: resolveProjects took 0.200375ms
+[debug]       Load.apply: finalTransforms took 24.467562ms
+[debug]       Load.apply: config.delegates took 0.919977ms
+[debug]       Load.apply: Def.make(settings)... took 263.18113ms
+[debug]       Load.apply: structureIndex took 102.794981ms
+[debug]       Load.apply: mkStreams took 0.00307ms
+[info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 87802.128082ms
+[debug]     Load.loadUnit: defsScala took 0.010674ms
+[debug] [Loading] Scanning directory /Users/calvinkhor/Documents/GitHub/learning_scala
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(metals.MetalsPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(ch.epfl.scala.debugadapter.sbtplugin.DebugAdapterPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(metals.MetalsPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(ch.epfl.scala.debugadapter.sbtplugin.DebugAdapterPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,ch.epfl.scala.debugadapter.sbtplugin.DebugAdapterPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin,metals.MetalsPlugin)
+[debug] Plugins.deducer#function took 3.000201 ms
+[debug]         Load.resolveProject(learning_scala) took 19.443974ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id learning_scala, base: /Users/calvinkhor/Documents/GitHub/learning_scala, plugins: List(<none>))) took 23.269417ms
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala, returning: (learning_scala)
+[debug]     Load.loadUnit: loadedProjectsRaw took 25.292458ms
+[debug]     Load.loadUnit: cleanEvalClasses took 0.018005ms
+[debug]   Load.loadUnit(file:/Users/calvinkhor/Documents/GitHub/learning_scala/, ...) took 87829.781721ms
+[debug] Load.apply: load took 87855.97485ms
+[debug] Load.apply: resolveProjects took 0.158744ms
+[debug] Load.apply: finalTransforms took 20.587579ms
+[debug] Load.apply: config.delegates took 0.532594ms
+[debug] Load.apply: Def.make(settings)... took 132.911834ms
+[debug] Load.apply: structureIndex took 69.848954ms
+[debug] Load.apply: mkStreams took 0.002938ms
+[info] set current project to learning_scala (in build file:/Users/calvinkhor/Documents/GitHub/learning_scala/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:///Users/calvinkhor/.sbt/1.0/server/8b4f4c66888518ff6401/sock
+[debug] Writing bsp connection file
+[info] started sbt server
+[warn] Metals requires the semanticdb compiler plugin
+[warn] consider setting 'Global / semanticdbEnabled := true' in your global sbt settings ($HOME/.sbt/1.0)

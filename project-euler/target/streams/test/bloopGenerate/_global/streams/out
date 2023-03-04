@@ -1,0 +1,4 @@
+[debug] [project-euler-test] Classpath dependencies List()
+[debug] [project-euler-test] Dependencies from configurations List(project-euler)
+[debug] Bloop wrote the configuration of project 'project-euler-test' to '/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.bloop/project-euler-test.json'
+[success] Generated .bloop/project-euler-test.json

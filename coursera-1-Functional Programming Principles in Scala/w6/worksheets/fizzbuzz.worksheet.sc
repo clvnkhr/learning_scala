@@ -20,7 +20,7 @@
 
 val numToString = List(3 -> "Fizz", 5 -> "Buzz")
 
-def fizzBuzzFromScalaAlgorithms(n: Int): String = {
+def fizzBuzzFromScalaAlgorithms(n: Int): String = 
   def isDivisibleBy(i: Int): Boolean = n % i == 0
   numToString.collect({
     case (n, str) if isDivisibleBy(n) => str
@@ -30,7 +30,7 @@ def fizzBuzzFromScalaAlgorithms(n: Int): String = {
     case strings =>
       strings.mkString
   }
-}
+end fizzBuzzFromScalaAlgorithms
 
 // What a horrible mess???
 

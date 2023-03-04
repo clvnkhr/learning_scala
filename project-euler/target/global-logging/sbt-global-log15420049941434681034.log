@@ -1,0 +1,89 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[info] Updated file /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/build.properties: set sbt.version to 1.8.0
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.8.0 (Eclipse Adoptium Java 17.0.5)
+[debug] Load.defaultLoad until apply took 111.044183ms
+[debug]                 Load.loadUnit: plugins took 133.12074ms
+[debug]                 Load.loadUnit: defsScala took 0.428645ms
+[debug] [Loading] Scanning directory /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project
+[debug]                   Load.loadUnit: mkEval took 23.101702ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 24.512304 ms
+[info] loading settings for project project-euler-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(project-euler-build-build) took 71.180008ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id project-euler-build-build, base: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project, plugins: List(<none>))) took 109.950273ms
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project, returning: (project-euler-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 3833.783519ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 106.461056ms
+[debug]               Load.loadUnit(file:/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project/, ...) took 4087.664288ms
+[debug]             Load.apply: load took 4588.38063ms
+[debug]             Load.apply: resolveProjects took 6.412848ms
+[debug]             Load.apply: finalTransforms took 108.858638ms
+[debug]             Load.apply: config.delegates took 9.535157ms
+[debug]             Load.apply: Def.make(settings)... took 591.310889ms
+[debug]             Load.apply: structureIndex took 123.082587ms
+[debug]             Load.apply: mkStreams took 1.983907ms
+[info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 7935.089599ms
+[debug]           Load.loadUnit: defsScala took 0.005702ms
+[debug] [Loading] Scanning directory /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project
+[debug]             Load.loadUnit: mkEval took 0.39216ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(metals.MetalsPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(org.scaladebugger.SbtJdiTools),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(metals.MetalsPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.scaladebugger.SbtJdiTools))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,org.scaladebugger.SbtJdiTools,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin,metals.MetalsPlugin)
+[debug] Plugins.deducer#function took 4.088123 ms
+[info] loading settings for project project-euler-build from metals.sbt ...
+[debug]               Load.resolveProject(project-euler-build) took 11.699404ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id project-euler-build, base: /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project, plugins: List(<none>))) took 16.971476ms
+[debug] [Loading] Done in /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project, returning: (project-euler-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1051.986622ms
+[debug]           Load.loadUnit: cleanEvalClasses took 2.324589ms
+[debug]         Load.loadUnit(file:/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project/, ...) took 8991.323408ms
+[debug]       Load.apply: load took 8995.147612ms
+[debug]       Load.apply: resolveProjects took 0.210456ms
+[debug]       Load.apply: finalTransforms took 15.325926ms
+[debug]       Load.apply: config.delegates took 0.620009ms
+[debug]       Load.apply: Def.make(settings)... took 152.826064ms
+[debug]       Load.apply: structureIndex took 57.019535ms
+[debug]       Load.apply: mkStreams took 0.003377ms
+[info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

@@ -14,12 +14,13 @@ Find the sum of all the positive integers which cannot be written as the sum of 
  */
 
 // reusing code from pe021
-val primes: LazyList[Int] =
+lazy val primes: LazyList[Int] = {
   2 #:: (
     LazyList
       .from(3)
       .filter(i => (primes.takeWhile(_ <= math.sqrt(i)).forall(i % _ != 0)))
   )
+}
 
 def pow(n: Int, power: Int): Int =
   def pow1(n: Int, power: Int, acc: Int): Int =
@@ -27,6 +28,7 @@ def pow(n: Int, power: Int): Int =
   pow1(n, power, 1)
 
 def factorization(n: Int): Map[Int, Int] =
+  @annotation.tailrec
   def fact1(n: Int, factors: Map[Int, Int]): Map[Int, Int] =
     if n == 1 then factors.withDefaultValue(0)
     else
@@ -37,7 +39,7 @@ def factorization(n: Int): Map[Int, Int] =
   fact1(n, Map())
 
 def factors(n: Int): List[Int] =
-  if n == 0 then throw new IllegalArgumentException
+  require(n > 0)
   val fact = factorization(n)
   def factors1(curFact: Map[Int, Int], acc: List[Int]): List[Int] =
     if curFact.isEmpty then acc
@@ -48,7 +50,6 @@ def factors(n: Int): List[Int] =
         (0 to k).toList.flatMap(m => acc.map(_ / pow(prime, m)))
       )
   factors1(fact, List(n))
-def sigma(n: Int) = factors(n).sum
 
 //new code below
 factors(10)
@@ -61,8 +62,15 @@ Range(1, 11).exists(_.isAbundant)
 val abundants = LazyList.from(12).filter(_.isAbundant)
 
 abundants(0)
+abundants(100)
 
 val upperBd = 28123
-val firstSummand = abundants.takeWhile(_ < upperBd)
+val summand = abundants.takeWhile(_ <= upperBd - 12)
 
-
+upperBd * (upperBd + 1) / 2 - (
+  for
+    i <- summand
+    j <- summand
+    if i + j <= upperBd
+  yield (i + j).toLong
+).toSet.sum

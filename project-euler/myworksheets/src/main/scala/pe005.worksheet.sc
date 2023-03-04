@@ -5,6 +5,7 @@ import collection.immutable.HashMap
 def from(n: Int): LazyList[Int] = n #:: from(n + 1)
 
 def pow(n: Int, power: Int): Int =
+  @annotation.tailrec
   def pow1(n: Int, power: Int, acc: Int): Int =
     if power == 0 then acc else pow1(n, power - 1, acc * n)
   pow1(n, power, 1)

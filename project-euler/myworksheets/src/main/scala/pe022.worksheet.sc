@@ -24,3 +24,5 @@ sortedNames
   .sum
 
 bufferedSource.close // not necessary in a worksheet I guess?
+
+1.abs
