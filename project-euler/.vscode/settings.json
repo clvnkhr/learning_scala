@@ -1,5 +1,8 @@
 {
     "files.watcherExclude": {
         "**/target": true
-    }
+    },
+    "metals.showImplicitConversionsAndClasses": true,
+    "metals.showImplicitArguments": true,
+    "metals.showInferredType": true
 }

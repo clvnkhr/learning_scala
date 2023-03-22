@@ -2,22 +2,20 @@
 
 import collection.immutable.HashMap
 
-def from(n: Int): LazyList[Int] = n #:: from(n + 1)
-
 def pow(n: Int, power: Int): Int =
   @annotation.tailrec
-  def pow1(n: Int, power: Int, acc: Int): Int =
-    if power == 0 then acc else pow1(n, power - 1, acc * n)
-  pow1(n, power, 1)
+  def pow1(power: Int, acc: Int): Int =
+    if power == 0 then acc
+    else if power % 2 == 0 then pow1(power / 2, acc * acc)
+    else pow1(power - 1, acc * n)
+  if power == 0 then 1 else pow1(power - 1, n)
 
-val nat = from(1)
-
-def eratosthenes(l: LazyList[Int]): LazyList[Int] =
-  l.head #:: eratosthenes(l.tail.filter(_ % l.head != 0))
-
-val primes = eratosthenes(nat.tail)
+val primes: LazyList[Int] = 2 #:: LazyList
+  .from(3)
+  .filter(k => primes.takeWhile(_ <= math.sqrt(k)).forall(k % _ != 0))
 
 def factorization(n: Int): Map[Int, Int] =
+  @annotation.tailrec
   def factor1(n: Int, factors: Map[Int, Int]): Map[Int, Int] =
     if n == 1 then factors.withDefaultValue(0)
     else
@@ -29,6 +27,10 @@ def factorization(n: Int): Map[Int, Int] =
 
 def factorsToNumber(factors: Map[Int, Int]) =
   factors.map((prime, pows) => pow(prime, pows)).foldLeft(1)(_ * _)
+
+def gcd(x: BigInt, y: BigInt): BigInt =
+  val (div, mod) = x /% y
+  if mod == 0 then div else gcd(y, mod)
 
 def leastFactors(n: Int) =
   def lf1(n: Int, acc: HashMap[Int, Int]): HashMap[Int, Int] =

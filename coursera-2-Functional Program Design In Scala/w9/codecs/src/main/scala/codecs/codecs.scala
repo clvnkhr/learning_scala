@@ -36,6 +36,7 @@ enum Json:
     */
   def decodeAs[A](using decoder: Decoder[A]): Option[A] =
     decoder.decode(this)
+end Json
 
 /** A type class that turns a value of type `A` into its JSON representation.
   */
@@ -89,7 +90,7 @@ trait EncoderInstances:
     * elements encoded with the given `encoder`
     */
   given [A](using encoder: Encoder[A]): Encoder[List[A]] =
-    Encoder.fromFunction(as => Json.Arr(as.map(encoder.encode)))
+    Encoder.fromFunction(arr => Json.Arr(arr.map(encoder.encode)))
 
 /** A specialization of `Encoder` that returns JSON objects only
   */
@@ -183,29 +184,55 @@ trait DecoderInstances:
   /** A decoder for `Boolean` values */
   given Decoder[Boolean] =
     Decoder.fromPartialFunction { case Json.Bool(b) => b }
-  // TODO Define a given value of type `Decoder[Boolean]`
+  // DONE Define a given value of type `Decoder[Boolean]`
 
   /** A decoder for JSON arrays. It decodes each item of the array using the
     * given `decoder`. The resulting decoder succeeds only if all the JSON array
     * items are successfully decoded.
     */
   given [A](using decoder: Decoder[A]): Decoder[List[A]] =
-    Decoder.fromPartialFunction {
-      case Json.Arr(items) if items.map(decoder.decode).forall(_.isDefined) =>
-        items
-          .map(decoder.decode)
-          .map(_.get)
+    // Decoder.fromPartialFunction {
+    //   case Json.Arr(items) if items.map(decoder.decode).forall(_.isDefined) =>
+    //     items
+    //       .map(decoder.decode)
+    //       .map(_.get)
+    // }
+
+    Decoder.fromFunction {
+      case Json.Arr(items) =>
+        val candidate = items.map(decoder.decode)
+        if candidate.forall(_.isDefined) then Some(candidate.map(_.get))
+        else None
+      case _ => None
     }
+
+    // Decoder.fromFunction {
+    //   case Json.Arr(items) => {
+    //     def d(jsons: List[Json], acc: Option[List[A]]): Option[List[A]] =
+    //       jsons match
+    //         case Nil => acc.map(_.reverse)
+    //         case j :: sons =>
+    //           d(sons, for (v <- j.decodeAs[A]; vs <- acc) yield v :: vs)
+    //     d(items, Some(Nil))
+    //   }
+    //   case _ => None
+    // }
 
   /** A decoder for JSON objects. It decodes the value of a field of the
     * supplied `name` using the given `decoder`.
     */
   def field[A](name: String)(using decoder: Decoder[A]): Decoder[A] =
-    Decoder.fromPartialFunction {
-      case Json.Obj(fields)
-          if fields.contains(name) && !decoder.decode(fields(name)).isEmpty =>
-        decoder.decode(fields(name)).get
-      // TODO: do I need the decoder...isEmpty check?
+    // Decoder.fromPartialFunction {
+    //   case Json.Obj(fields)
+    //       if fields.contains(name) && !decoder.decode(fields(name)).isEmpty =>
+    //     decoder.decode(fields(name)).get
+    //   // TODO: do I need the decoder...isEmpty check?
+    // }
+
+    Decoder.fromFunction {
+      case Json.Obj(fields) =>
+        fields.get(name).flatMap(decoder.decode(_))
+      case _ => None
     }
 
 case class Person(name: String, age: Int)
@@ -234,7 +261,7 @@ object Contacts extends ContactsCodecs
 
 trait ContactsCodecs:
 
-  // TODO Define the encoder and the decoder for `Contacts`
+  // DONE Define the encoder and the decoder for `Contacts`
   // The JSON representation of a value of type `Contacts` should be
   // a JSON object with a single field named “people” containing an
   // array of values of type `Person` (reuse the `Person` codecs)
@@ -268,11 +295,21 @@ object Main:
     println(maybeJsonObj2.flatMap(_.decodeAs[Person]))
     println(renderJson(Person("Bob", 66)))
 
-// Bonus Questions
-// Can you explicitly write the value inferred by the compiler when it summons the Encoder[List[Person]]?
+    // Bonus Questions
+    // Can you explicitly write the value inferred by the compiler when it summons the Encoder[List[Person]]?
+    // Ans: Yes, if you give explicit names
+    val listPersonEncode = summon[Encoder[List[Person]]]
+    val jsonListPerson =
+      listPersonEncode.encode(List(Person("A", 1), Person("B", 2)))
+    println(jsonListPerson.decodeAs[List[Person]])
 
-// Would it be possible to define codecs for optional fields?
+    // Would it be possible to define codecs for optional fields?
+    // Ans: Idk, sure? what would be the Json implementation? Perhaps {"Some": true, "data": Obj} or {"Some": false}?
 
-// Would it be possible to define a function that provides an implicit instance of Encoder[Option[A]] for any type A for which there is an implicit Encoder[A] (like we do with Encoder[List[A]])?
+    // Would it be possible to define a function that provides an implicit insta  nce of Encoder[Option[A]]
+    // for any type A for which there is an implicit Encoder[A] (like we do with Encoder[List[A]])?
+    // Ans: of course
 
-// Would it be possible to define codecs for sealed traits in addition to case classes?
+    // Would it be possible to define codecs for sealed traits in addition to case classes?
+    // I don't think so, its kinda important that we can look into the case class via the deconstructors.
+  

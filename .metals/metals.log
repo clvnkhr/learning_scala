@@ -27810,3 +27810,659 @@ object Lists:
 2023.03.04 10:28:53 INFO  Shutting down server
 2023.03.04 10:28:53 INFO  shutting down Metals
 2023.03.04 10:28:53 INFO  Exiting server
+2023.03.04 22:46:34 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.04 22:46:35 INFO  time: initialize in 0.75s
+2023.03.04 22:46:35 WARN  Build server is not auto-connectable.
+Mar 04, 2023 11:29:40 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 04, 2023 11:30:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 7:46:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:31 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:40 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:42 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:04:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:04:58 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:20:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:21:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:25:08 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:28:39 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:33:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:34:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:46:55 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:46:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:47:10 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:47:14 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.05 09:52:12 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/CheckSumAccumulator.scala
+2023.03.05 09:52:14 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/CheckSumAccumulator.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.05 09:52:17 INFO  time: code lens generation in 4.51s
+Mar 05, 2023 9:52:47 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.05 09:52:54 INFO  Shutting down server
+2023.03.05 09:52:54 INFO  shutting down Metals
+2023.03.05 09:52:54 INFO  Exiting server
+2023.03.05 09:53:01 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.05 09:53:01 INFO  time: initialize in 0.67s
+2023.03.05 09:53:03 WARN  Build server is not auto-connectable.
+2023.03.05 09:53:03 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/CheckSumAccumulator.scala
+2023.03.05 09:53:06 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/CheckSumAccumulator.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.05 09:53:08 INFO  time: code lens generation in 2.44s
+2023.03.05 09:53:37 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala
+Mar 05, 2023 9:53:37 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.charAt(String.java:658)
+	at scala.collection.StringOps$.apply$extension(StringOps.scala:188)
+	at scala.meta.internal.pc.PcCollector.adjust(PcCollector.scala:84)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:32)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:27)
+	at scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$_$collect$1(PcCollector.scala:318)
+	at scala.meta.internal.pc.PcCollector.collectNamesWithParent$1(PcCollector.scala:359)
+	at scala.meta.internal.pc.PcCollector.$anonfun$14(PcCollector.scala:457)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:489)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse$$anonfun$1(PcCollector.scala:491)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:491)
+	at scala.meta.internal.pc.PcCollector$DeepFolderWithParent.apply(PcCollector.scala:497)
+	at scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:458)
+	at scala.meta.internal.pc.PcCollector.resultAllOccurences(PcCollector.scala:243)
+	at scala.meta.internal.pc.PcCollector.result(PcCollector.scala:237)
+	at scala.meta.internal.pc.PcSemanticTokensProvider.provide(PcSemanticTokensProvider.scala:37)
+
+Mar 05, 2023 9:53:38 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.charAt(String.java:658)
+	at scala.collection.StringOps$.apply$extension(StringOps.scala:188)
+	at scala.meta.internal.pc.PcCollector.adjust(PcCollector.scala:84)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:32)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:27)
+	at scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$_$collect$1(PcCollector.scala:318)
+	at scala.meta.internal.pc.PcCollector.collectNamesWithParent$1(PcCollector.scala:359)
+	at scala.meta.internal.pc.PcCollector.$anonfun$14(PcCollector.scala:457)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:489)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse$$anonfun$1(PcCollector.scala:491)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:491)
+	at scala.meta.internal.pc.PcCollector$DeepFolderWithParent.apply(PcCollector.scala:497)
+	at scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:458)
+	at scala.meta.internal.pc.PcCollector.resultAllOccurences(PcCollector.scala:243)
+	at scala.meta.internal.pc.PcCollector.result(PcCollector.scala:237)
+	at scala.meta.internal.pc.PcSemanticTokensProvider.provide(PcSemanticTokensProvider.scala:37)
+
+2023.03.05 09:53:59 INFO  Shutting down server
+2023.03.05 09:53:59 INFO  shutting down Metals
+2023.03.05 09:53:59 INFO  Exiting server
+2023.03.05 11:22:39 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.05 11:22:40 INFO  time: initialize in 0.68s
+2023.03.05 11:22:41 WARN  Build server is not auto-connectable.
+2023.03.05 11:22:40 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala
+2023.03.05 11:22:44 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala. Using presentation compiler with project's scala-library version: 3.2.2
+Mar 05, 2023 11:22:46 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.charAt(String.java:658)
+	at scala.collection.StringOps$.apply$extension(StringOps.scala:188)
+	at scala.meta.internal.pc.PcCollector.adjust(PcCollector.scala:84)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:32)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:27)
+	at scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$_$collect$1(PcCollector.scala:318)
+	at scala.meta.internal.pc.PcCollector.collectNamesWithParent$1(PcCollector.scala:359)
+	at scala.meta.internal.pc.PcCollector.$anonfun$14(PcCollector.scala:457)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:489)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse$$anonfun$1(PcCollector.scala:491)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:491)
+	at scala.meta.internal.pc.PcCollector$DeepFolderWithParent.apply(PcCollector.scala:497)
+	at scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:458)
+	at scala.meta.internal.pc.PcCollector.resultAllOccurences(PcCollector.scala:243)
+	at scala.meta.internal.pc.PcCollector.result(PcCollector.scala:237)
+	at scala.meta.internal.pc.PcSemanticTokensProvider.provide(PcSemanticTokensProvider.scala:37)
+
+2023.03.05 11:22:47 INFO  Shutting down server
+2023.03.05 11:22:47 INFO  shutting down Metals
+2023.03.05 11:22:47 INFO  Exiting server
+2023.03.05 11:22:48 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2023.03.07 16:31:47 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.07 16:31:48 INFO  time: initialize in 0.7s
+2023.03.07 16:31:49 WARN  Build server is not auto-connectable.
+2023.03.07 16:31:49 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala
+2023.03.07 16:31:55 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala. Using presentation compiler with project's scala-library version: 3.2.2
+Mar 07, 2023 4:31:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.charAt(String.java:658)
+	at scala.collection.StringOps$.apply$extension(StringOps.scala:188)
+	at scala.meta.internal.pc.PcCollector.adjust(PcCollector.scala:84)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:32)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:27)
+	at scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$_$collect$1(PcCollector.scala:318)
+	at scala.meta.internal.pc.PcCollector.collectNamesWithParent$1(PcCollector.scala:359)
+	at scala.meta.internal.pc.PcCollector.$anonfun$14(PcCollector.scala:457)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:489)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse$$anonfun$1(PcCollector.scala:491)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:491)
+	at scala.meta.internal.pc.PcCollector$DeepFolderWithParent.apply(PcCollector.scala:497)
+	at scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:458)
+	at scala.meta.internal.pc.PcCollector.resultAllOccurences(PcCollector.scala:243)
+	at scala.meta.internal.pc.PcCollector.result(PcCollector.scala:237)
+	at scala.meta.internal.pc.PcSemanticTokensProvider.provide(PcSemanticTokensProvider.scala:37)
+
+2023.03.07 16:31:58 INFO  time: code lens generation in 2.94s
+Mar 07, 2023 4:32:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.charAt(String.java:658)
+	at scala.collection.StringOps$.apply$extension(StringOps.scala:188)
+	at scala.meta.internal.pc.PcCollector.adjust(PcCollector.scala:84)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:32)
+	at scala.meta.internal.pc.PcSemanticTokensProvider$Collector$.collect(PcSemanticTokensProvider.scala:27)
+	at scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$_$collect$1(PcCollector.scala:318)
+	at scala.meta.internal.pc.PcCollector.collectNamesWithParent$1(PcCollector.scala:359)
+	at scala.meta.internal.pc.PcCollector.$anonfun$14(PcCollector.scala:457)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:489)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse$$anonfun$1(PcCollector.scala:491)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at scala.meta.internal.pc.PcCollector$WithParentTraverser.traverse(PcCollector.scala:491)
+	at scala.meta.internal.pc.PcCollector$DeepFolderWithParent.apply(PcCollector.scala:497)
+	at scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:458)
+	at scala.meta.internal.pc.PcCollector.resultAllOccurences(PcCollector.scala:243)
+	at scala.meta.internal.pc.PcCollector.result(PcCollector.scala:237)
+	at scala.meta.internal.pc.PcSemanticTokensProvider.provide(PcSemanticTokensProvider.scala:37)
+
+2023.03.07 16:32:08 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-2-Functional Program Design In Scala/w9/codecs/src/main/scala/codecs/codecs.scala
+2023.03.07 16:32:14 INFO  Shutting down server
+2023.03.07 16:32:14 INFO  shutting down Metals
+2023.03.07 16:32:14 INFO  Exiting server
+2023.03.21 21:13:07 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala' for client Neovim 0.8.3.[0m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.21 21:13:08 INFO  time: initialize in 0.91s[0m
+2023.03.21 21:13:08 WARN  Build server is not auto-connectable.[0m
+2023.03.21 21:13:08 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala[0m
+2023.03.21 21:13:13 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala. Using presentation compiler with project's scala-library version: 3.2.2[0m
+2023.03.21 21:13:22 INFO  running '/Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/p8/d728c3090pl_2q11s2tw8rjr0000gn/T/metals1141603655967732429/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.03.21 21:13:25 INFO  [info] welcome to sbt 1.8.2 (AdoptOpenJDK Java 1.8.0_292)[0m
+2023.03.21 21:13:29 INFO  [info] loading settings for project learning_scala-build-build from metals.sbt ...[0m
+2023.03.21 21:13:32 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project/project[0m
+2023.03.21 21:13:37 INFO  [info] loading settings for project learning_scala-build from metals.sbt ...[0m
+2023.03.21 21:13:37 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project[0m
+2023.03.21 21:13:43 INFO  [success] Generated .bloop/learning_scala-build.json[0m
+2023.03.21 21:13:43 INFO  [success] Total time: 6 s, completed 21-Mar-2023 21:13:44[0m
+2023.03.21 21:13:45 INFO  [info] set current project to learning_scala (in build file:/Users/calvinkhor/Documents/GitHub/learning_scala/)[0m
+2023.03.21 21:13:45 INFO  [warn] scala-library-2.12.17-javadoc.jar no longer exists at /Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.17/scala-library-2.12.17-javadoc.jar[0m
+2023.03.21 21:13:46 INFO  [success] Generated .bloop/learning_scala.json[0m
+2023.03.21 21:13:46 INFO  [success] Generated .bloop/learning_scala-test.json[0m
+2023.03.21 21:13:46 INFO  [success] Total time: 1 s, completed 21-Mar-2023 21:13:46[0m
+2023.03.21 21:13:46 INFO  time: ran 'sbt bloopInstall' in 23s[0m
+2023.03.21 21:13:46 INFO  Attempting to connect to the build server...[0m
+2023.03.21 21:13:46 INFO  Bloop uses /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json[0m
+2023.03.21 21:13:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.03.21 21:13:46 INFO  Attempting to connect to the build server...[0m
+2023.03.21 21:13:46 INFO  Bloop uses /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json[0m
+2023.03.21 21:13:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.03.21 21:13:47 INFO  time: Connected to build server in 0.8s[0m
+2023.03.21 21:13:47 INFO  Connected to Build server: Bloop v1.5.6[0m
+2023.03.21 21:13:47 INFO  time: Imported build in 0.13s[0m
+2023.03.21 21:13:51 INFO  time: indexed workspace in 4.29s[0m
+2023.03.21 21:13:51 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala[0m
+Mar 21, 2023 9:13:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fprogramming_in_scala%2Fforargs.scala:1: error: expected start of definition
+@main def m(args: String*) =
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fprogramming_in_scala%2Fforargs.scala:1: error: expected start of definition
+@main def m(args: String*) =
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.03.21 21:13:55 INFO  time: code lens generation in 3.69s[0m
+2023.03.21 21:17:27 INFO  [0m
+2023.03.21 21:17:27 INFO  Template applied in /Users/calvinkhor/Documents/GitHub/learning_scala/./first-nvim-project[0m
+2023.03.21 21:17:27 INFO  [0m
+2023.03.21 21:17:27 INFO  time: ran 'giter8.Giter8' in 6.27s[0m
+2023.03.21 21:17:27 INFO  [0m
+2023.03.21 21:17:27 INFO  Template applied in /Users/calvinkhor/Documents/GitHub/learning_scala/./nvim-scala3[0m
+2023.03.21 21:17:27 INFO  [0m
+2023.03.21 21:17:27 INFO  time: ran 'giter8.Giter8' in 6.43s[0m
+2023.03.21 21:17:59 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/build.sbt[0m
+2023.03.21 21:18:05 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/src/main/scala/Main.scala[0m
+Mar 21, 2023 9:18:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Mar 21, 2023 9:18:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.03.21 21:18:08 ERROR scalafmt: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/src/main/scala/Main.scala:1: error: [dialect scala213] expected start of definition
+@main def hello: Unit = 
+      ^[0m
+2023.03.21 21:18:08 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/src/main/scala/Main.scala[0m
+Mar 21, 2023 9:18:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Mar 21, 2023 9:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Mar 21, 2023 9:18:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Mar 21, 2023 9:18:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+Mar 21, 2023 9:18:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+file%3A%2F%2F%2FUsers%2Fcalvinkhor%2FDocuments%2FGitHub%2Flearning_scala%2Fnvim-scala3%2Fsrc%2Fmain%2Fscala%2FMain.scala:1: error: expected start of definition
+@main def hello: Unit = 
+      ^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:3723)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:3696)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4282)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$2.applyOrElse(ScalametaParser.scala:4270)
+	at scala.PartialFunction.$anonfun$runWith$1$adapted(PartialFunction.scala:145)
+	at scala.meta.internal.parsers.ScalametaParser.statSeqBuf(ScalametaParser.scala:4263)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$14(ScalametaParser.scala:4476)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4476)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4431)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:327)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:379)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4424)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4429)
+	at scala.meta.internal.parsers.ScalametaParser.parseSourceImpl(ScalametaParser.scala:129)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$1(ScalametaParser.scala:126)
+	at scala.meta.internal.parsers.ScalametaParser.parseRuleAfterBOF(ScalametaParser.scala:53)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:48)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:126)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.parsers.Parse$$anon$1.apply(Parse.scala:36)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:206)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:54)
+
+2023.03.21 21:18:48 INFO  running '/Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/p8/d728c3090pl_2q11s2tw8rjr0000gn/T/metals2842260287058087483/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.03.21 21:18:51 INFO  [info] welcome to sbt 1.8.2 (AdoptOpenJDK Java 1.8.0_292)[0m
+2023.03.21 21:18:52 INFO  [info] loading settings for project learning_scala-build-build from metals.sbt ...[0m
+2023.03.21 21:18:55 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project/project[0m
+2023.03.21 21:18:57 INFO  [info] loading settings for project learning_scala-build from metals.sbt ...[0m
+2023.03.21 21:18:57 INFO  [info] loading project definition from /Users/calvinkhor/Documents/GitHub/learning_scala/project[0m
+2023.03.21 21:19:03 INFO  [success] Generated .bloop/learning_scala-build.json[0m
+2023.03.21 21:19:03 INFO  [success] Total time: 6 s, completed 21-Mar-2023 21:19:03[0m
+2023.03.21 21:19:04 INFO  [info] set current project to learning_scala (in build file:/Users/calvinkhor/Documents/GitHub/learning_scala/)[0m
+2023.03.21 21:19:04 INFO  [success] Generated .bloop/learning_scala-test.json[0m
+2023.03.21 21:19:04 INFO  [success] Generated .bloop/learning_scala.json[0m
+2023.03.21 21:19:04 INFO  [success] Total time: 1 s, completed 21-Mar-2023 21:19:05[0m
+2023.03.21 21:19:05 INFO  time: ran 'sbt bloopInstall' in 16s[0m
+2023.03.21 21:19:05 INFO  Disconnecting from Bloop session...[0m
+2023.03.21 21:19:05 INFO  Shut down connection with build server.[0m
+2023.03.21 21:19:05 INFO  Shut down connection with build server.[0m
+2023.03.21 21:19:05 INFO  Attempting to connect to the build server...[0m
+2023.03.21 21:19:05 INFO  Bloop uses /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json[0m
+2023.03.21 21:19:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.03.21 21:19:05 INFO  Attempting to connect to the build server...[0m
+2023.03.21 21:19:05 INFO  Bloop uses /Users/calvinkhor/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home defined at /Users/calvinkhor/.bloop/bloop.json[0m
+2023.03.21 21:19:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calvinkhor/Documents/GitHub/learning_scala/project/.metals/bsp.trace.json or /Users/calvinkhor/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.03.21 21:19:05 INFO  time: Connected to build server in 0.2s[0m
+2023.03.21 21:19:05 INFO  Connected to Build server: Bloop v1.5.6[0m
+2023.03.21 21:19:05 INFO  time: indexed workspace in 0.67s[0m
+2023.03.21 21:19:06 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/programming_in_scala/forargs.scala[0m
+2023.03.21 21:19:06 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/src/main/scala/Main.scala[0m
+2023.03.21 21:19:06 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/nvim-scala3/build.sbt[0m
+2023.03.21 21:22:32 INFO  Shutting down server[0m
+2023.03.21 21:22:32 INFO  shutting down Metals[0m
+2023.03.21 21:22:32 INFO  Shut down connection with build server.[0m
+2023.03.21 21:22:32 INFO  Shut down connection with build server.[0m

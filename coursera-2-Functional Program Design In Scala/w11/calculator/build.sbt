@@ -1,11 +1,11 @@
 course := "progfun2"
 assignment := "calculator"
 
-scalaVersion := "3.1.0"
+scalaVersion := "3.2.2"
 
 scalacOptions ++= Seq("-language:implicitConversions", "-deprecation")
 
 libraryDependencies ++= Seq(
-    "org.scalameta" %% "munit" % "0.7.26" % Test,
-    "org.scalacheck" %% "scalacheck" % "1.15.4"
+  "org.scalameta" %% "munit" % "0.7.26" % Test,
+  "org.scalacheck" %% "scalacheck" % "1.15.4"
 )

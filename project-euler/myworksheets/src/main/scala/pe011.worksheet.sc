@@ -24,7 +24,7 @@ lazy val rawGrid =
 
 val grid = rawGrid
   .split("\n")
-  .map(_.strip.split(" ").toList.map(_.toLong))
+  .map(_.trim.split(" ").toList.map(_.toLong))
   .toList
 
 val l = grid.length
@@ -33,27 +33,23 @@ grid.forall(_.length == l)
 val w = 4
 
 val horizontals =
-  for
-    i <- 0 until (l - w + 1)
-    j <- 0 until l
+  for i <- 0 until (l - w + 1)
+  j <- 0 until l
   yield (0 until w).map(k => grid(i + k)(j)).product
 
 val verticals =
-  for
-    i <- 0 until l
-    j <- 0 until (l - w + 1)
+  for i <- 0 until l
+  j <- 0 until (l - w + 1)
   yield (0 until w).map(k => grid(i)(j + k)).product
 
 val diagonals =
-  for
-    i <- 0 until (l - w + 1)
-    j <- 0 until (l - w + 1)
+  for i <- 0 until (l - w + 1)
+  j <- 0 until (l - w + 1)
   yield (0 until w).map(k => grid(i + k)(j + k)).product
 
 val antidiagonals =
-  for
-    i <- 0 until (l - w + 1)
-    j <- w - 1 until l
+  for i <- 0 until (l - w + 1)
+  j <- w - 1 until l
   yield (0 until w).map(k => grid(i + k)(j - k)).product
 
 (horizontals ++ verticals ++ diagonals ++ antidiagonals).max

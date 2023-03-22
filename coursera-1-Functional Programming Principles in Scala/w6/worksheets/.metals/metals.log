@@ -9168,3 +9168,171 @@ WARNING: Unmatched cancel notification for request id 5885
 2023.03.04 10:28:48 INFO  Shutting down server
 2023.03.04 10:28:48 INFO  shutting down Metals
 2023.03.04 10:28:48 INFO  Exiting server
+2023.03.04 23:12:13 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.04 23:12:14 INFO  time: initialize in 0.63s
+2023.03.04 23:12:15 WARN  Build server is not auto-connectable.
+Mar 04, 2023 11:12:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Mar 04, 2023 11:12:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2023.03.04 23:12:15 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc
+2023.03.04 23:12:16 INFO  skipping build import with status 'Failed'
+2023.03.04 23:13:13 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.04 23:13:14 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+Mar 04, 2023 11:13:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+Mar 04, 2023 11:13:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2023.03.04 23:13:15 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/poly.worksheet.sc
+2023.03.04 23:13:18 INFO  time: code lens generation in 3.27s
+2023.03.04 23:13:19 INFO  time: code lens generation in 4.5s
+2023.03.04 23:13:44 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.04 23:13:44 INFO  time: evaluated worksheet 'shadowdef.worksheet.sc' in 1m28s
+2023.03.04 23:13:48 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/poly.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.04 23:13:48 INFO  time: evaluated worksheet 'poly.worksheet.sc' in 3.75s
+2023.03.04 23:13:52 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.04 23:13:52 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 4.15s
+Mar 04, 2023 11:29:40 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 04, 2023 11:30:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 7:46:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:31 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:40 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:42 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:03:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:04:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:04:58 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:05:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:20:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:21:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:25:08 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:28:39 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:33:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:34:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:46:55 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:46:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:47:10 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:47:14 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 05, 2023 9:50:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 90
+2023.03.05 09:50:32 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc
+2023.03.05 09:50:35 INFO  time: evaluated worksheet 'shadowdef.worksheet.sc' in 3.23s
+2023.03.05 09:50:39 INFO  Shutting down server
+2023.03.05 09:50:39 INFO  shutting down Metals
+2023.03.05 09:50:39 INFO  Exiting server
+2023.03.05 11:22:54 INFO  Started: Metals version 0.11.11 in workspace '/Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.05 11:22:54 INFO  time: initialize in 0.69s
+2023.03.05 11:22:56 WARN  Build server is not auto-connectable.
+2023.03.05 11:22:56 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc
+2023.03.05 11:22:56 INFO  skipping build import with status 'Failed'
+2023.03.05 11:23:00 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+Mar 05, 2023 11:23:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Mar 05, 2023 11:23:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2023.03.05 11:23:00 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:23:08 INFO  time: code lens generation in 6.78s
+2023.03.05 11:23:08 INFO  time: code lens generation in 7.46s
+2023.03.05 11:23:08 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:23:12 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/shadowdef.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.05 11:23:12 INFO  time: evaluated worksheet 'shadowdef.worksheet.sc' in 15s
+2023.03.05 11:23:17 INFO  no build target found for /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.05 11:23:17 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 5.34s
+2023.03.05 11:23:21 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 3.86s
+2023.03.05 11:32:21 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:107:31: expected 'with' <body>
+given C with extension (c: C) def newthing = 1
+                              ^^^
+2023.03.05 11:32:22 INFO  time: code lens generation in 1.07s
+2023.03.05 11:32:22 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.38s
+2023.03.05 11:32:34 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:108:18: expected 'with' <body>
+extension (c: C) def newthing = 1
+                 ^^^
+2023.03.05 11:32:35 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.24s
+2023.03.05 11:32:36 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:32:37 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:32:38 INFO  time: code lens generation in 1.04s
+2023.03.05 11:32:39 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 3.19s
+2023.03.05 11:32:41 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 2.1s
+2023.03.05 11:32:44 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:109:1: ) expected but end of file found
+
+^
+2023.03.05 11:32:46 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.39s
+2023.03.05 11:32:46 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:32:48 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 2.02s
+2023.03.05 11:33:04 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:33:06 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 2.07s
+2023.03.05 11:33:08 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:109:1: 
+value a is not a member of object MdocApp.this.given_C
+summon[C].a
+^^^^^^^^^^^
+2023.03.05 11:33:10 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.32s
+2023.03.05 11:33:12 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:33:14 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 2s
+2023.03.05 11:33:14 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:33:16 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.89s
+2023.03.05 11:57:59 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:109:1: 
+Not found: newthing
+newthing(a)
+^^^^^^^^
+2023.03.05 11:58:00 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 0.88s
+2023.03.05 11:58:03 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:58:04 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.2s
+2023.03.05 11:58:32 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:109:1: 
+value newthing is not a member of object MdocApp.this.C
+C.newthing(a)
+^^^^^^^^^^
+2023.03.05 11:58:33 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 0.6s
+2023.03.05 11:58:33 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+[31merror[39m: testing using and given.worksheet.sc:109:1: 
+value newthing is not a member of object MdocApp.this.C
+C.newthing(a)
+^^^^^^^^^^
+2023.03.05 11:58:33 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 0.67s
+2023.03.05 11:58:37 WARN  no build target for: /Users/calvinkhor/Documents/GitHub/learning_scala/coursera-1-Functional Programming Principles in Scala/w6/worksheets/testing using and given.worksheet.sc
+2023.03.05 11:58:38 INFO  time: evaluated worksheet 'testing using and given.worksheet.sc' in 1.01s
+2023.03.05 11:59:03 INFO  Shutting down server
+2023.03.05 11:59:03 INFO  shutting down Metals
+2023.03.05 11:59:03 INFO  Exiting server

@@ -52,8 +52,6 @@ max(8, 4)
 max(List(2, 2), List(1, 3, 5))
 max(List(2), List(3, 1, 1))
 
-
-
 trait Functor[F[_]]:
   extension [A](x: F[A]) def map[B](f: A => B): F[B]
 
@@ -102,3 +100,10 @@ f(2)(using ec) // explicit argument
 f(2) // argument is inferred
 
 f(2)
+
+class C
+given C with
+  extension (c: C) def newthing = 1
+val a = C()
+a.newthing == 1
+summon[C].newthing(a)
