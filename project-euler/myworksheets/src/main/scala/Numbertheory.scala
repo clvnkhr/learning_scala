@@ -109,13 +109,15 @@ def binom(n: Int, k: Int): BigInt =
 def doublefactorial(n: Int) =
   fallingPow(n, if n % 2 == 0 then n / 2 else (n - 1) / 2, 2)
 
-/** Returns a non-increasing list of the prime divisors of n.
+/** Returns a non-increasing list of the prime divisors of n. Can probably be
+  * sped up.... worst case is if n is a prime. then the algo takes O(n) steps.
+  *
   * @param n
   * @return
   */
 def divisors(n: Long): List[Long] =
   @annotation.tailrec
-  def divisors1(n: Long, k: In, acc: List[Long]): List[Long] =
+  def divisors1(n: Long, k: Int, acc: List[Long]): List[Long] =
     if n < primes(k) then acc
     else if n % primes(k) == 0 then
       divisors1(n / primes(k), primes(k), primes(k) :: acc)
