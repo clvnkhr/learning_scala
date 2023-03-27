@@ -67,10 +67,8 @@ abundants(100)
 val upperBd = 28123
 val summand = abundants.takeWhile(_ <= upperBd - 12)
 
-upperBd * (upperBd + 1) / 2 - (
-  for
-    i <- summand
-    j <- summand
-    if i + j <= upperBd
-  yield (i + j).toLong
-).toSet.sum
+upperBd * (upperBd + 1) / 2 - (for
+  i <- summand
+  j <- summand
+  if i + j <= upperBd
+yield (i + j)).distinct.sum
