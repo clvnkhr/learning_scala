@@ -1,0 +1,4 @@
+[debug] [livechart] Classpath dependencies List()
+[debug] [livechart] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'livechart' to '/Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/.bloop/livechart.json'
+[success] Generated .bloop/livechart.json

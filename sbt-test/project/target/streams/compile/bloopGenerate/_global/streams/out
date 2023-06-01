@@ -1,0 +1,4 @@
+[debug] [sbt-test-build] Classpath dependencies List()
+[debug] [sbt-test-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'sbt-test-build' to '/Users/calvinkhor/Documents/GitHub/learning_scala/sbt-test/project/.bloop/sbt-test-build.json'
+[success] Generated .bloop/sbt-test-build.json

@@ -1,0 +1,24 @@
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/target/scala-3.2.2/livechart-test-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 389951 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 22098 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: 451644 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Batch mode: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 92439 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizing 8123 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 444810 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 544196 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 91651 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 6049 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 104820 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 1147 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 54266 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 5444 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 61566 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 562312 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 20704 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 849[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: reused: 0 -- invalidated: 4220[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: 604166 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 184868 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: total top-level trees: 13516; re-computed: 13516[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: total modules: 6; re-written: 6[0m

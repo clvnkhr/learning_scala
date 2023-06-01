@@ -54,6 +54,12 @@ val primesFrom5: LazyList[Int] = 5 #:: 7 #:: no2no3(11)
 // and
 // https://stackoverflow.com/questions/11768958/prime-sieve-in-haskell
 
+extension (n: Int)
+  def **(power: Int) = pow(n, power)
+  def isPrime = primesFrom5.takeWhile(_ <= n).contains(n)
+
+extension (n: BigInt) def **(power: Int) = pow(n, power)
+
 /** not so naive version of the power function, pow(n,power) := n^power.
   * Repeated squaring means that the number of multiplications is logarithmic in
   * the power.
@@ -62,10 +68,13 @@ val primesFrom5: LazyList[Int] = 5 #:: 7 #:: no2no3(11)
   * @param power
   * @return
   */
-def pow(n: BigInt, power: Long): BigInt =
+
+// def pow(n: Double, power: Double): Double = math.pow(n, power)
+
+def pow(n: BigInt, power: Int): BigInt =
   require(power >= 0)
   @annotation.tailrec
-  def pow1(n: BigInt, power: Long, acc: BigInt): BigInt =
+  def pow1(n: BigInt, power: Int, acc: BigInt): BigInt =
     require(power >= 0)
     if power == 0 then acc
     else if power % 2 == 0 then pow1(n * n, power / 2, acc)
@@ -96,7 +105,7 @@ def factorial(n: Int): BigInt = fallingPow(n, n, 1)
 
 /** Theoretically, binom(n,k) is the number of ways to choose k things from n
   * things, and can be written binom(n,k) = n!/(k!(n-k)!) fallingPow pre-cancels
-  * some factors for speed
+  * some factors for speed/accuracy
   * @param n
   * @param k
   * @return
@@ -124,14 +133,14 @@ def divisors(n: Long): List[Long] =
     else divisors1(n, k + 1, acc)
   divisors1(n, 0, Nil)
 
-def factorization(n: BigInt): Map[Int, Long] =
+def factorization(n: BigInt): Map[Int, Int] =
   @annotation.tailrec
-  def factor1(n: BigInt, factors: Map[Int, Long]): Map[Int, Long] =
+  def factor1(n: BigInt, factors: Map[Int, Int]): Map[Int, Int] =
     if n == 1 then factors.withDefaultValue(0)
     else
       val minPrime = primes.filter(n % _ == 0).head
       val newFactors =
-        factors.updated(minPrime, factors.getOrElse(minPrime, 0L) + 1)
+        factors.updated(minPrime, factors.getOrElse(minPrime, 0) + 1)
       factor1(n / minPrime, newFactors)
   factor1(n, Map())
 
@@ -146,7 +155,7 @@ def factorization(n: Int): Map[Int, Int] =
       factor1(n / minPrime, newFactors)
   factor1(n, Map())
 
-def factorizationToNumber(factors: Map[Int, Long]) =
+def factorizationToNumber(factors: Map[Int, Int]) =
   factors.map((prime, pows) => pow(prime, pows)).foldLeft(BigInt(1))(_ * _)
 
 def factors(n: Int): List[Int] =
@@ -217,6 +226,8 @@ def gcd(a: BigInt, b: BigInt): BigInt =
   * @return
   */
 def lcm(a: BigInt, b: BigInt): BigInt = a * b / gcd(a, b)
+
+def digits(n: BigInt) = n.abs.toString.map(_.toString.toInt)
 
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))

@@ -1,0 +1,17 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:186:0 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m186 |[0mend Main[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0mduplicate end marker[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:147:2 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m147 |[0m  dataVar.updater { ([36mdata[0m, [36mnewValue[0m) =>[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m  ^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m  Not found: dataVar[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:178:17 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m178 |[0m    children <-- dataSignal.split(_.id) { ([36mid[0m, [36minitial[0m, [36mitemSignal[0m) =>[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                 ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                 Not found: dataSignal[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

@@ -2,6 +2,7 @@ package projecteuler
 
 import projecteuler.util._
 import projecteuler.numbertheory._
+import scala.runtime.AbstractFunction4
 
 def pe(number: Int) = number match
   case _: 1 =>
@@ -119,7 +120,7 @@ def pe(number: Int) = number match
   // Explanation: take h=20 steps down and w=20 steps right, in any order.
   // Use balls and bins model
   //
-  case _: 16 => pow(2, 1000).toString.toList.map(_.toString.toInt).sum
+  case _: 16 => (2 ** 1000).toString.toList.map(_.toString.toInt).sum
 
   case _: 17 => {
     def basicToEnglish: Map[Int, String] = Map(
@@ -259,7 +260,7 @@ def pe(number: Int) = number match
   // solution with distinct is faster than toSet (!)
 
   case _: 24 =>
-    // WARNING: quite slow and memory intensive
+    // WARNING: quite slow
     // TODO: redo with pure math
     lazy val canonicalLists = (0 to 10).map(i => lexicoPerm((0 until i).toList))
     def lexicoPerm[A](lst: List[A]): LazyList[List[A]] =
@@ -282,19 +283,106 @@ def pe(number: Int) = number match
       if prev1 >= pow(10, 1000 - 1) then index
       else fibpe25(index + 1, prev1 + prev2, prev1)
     fibpe25(2, 1, 1)
+
+  case _: 26 =>
+    // NOTE: answer can be obtained from the OEIS: https://oeis.org/A051626/b051626.txt
+    // INFO: we say 1/n has a prefix of length p and reptend of length r if
+    // n = 0.a1a2a3...apb1b2...brb1b2...br...
+    // for integers ai, bi, and bi are not all 9s.
+    // we notate 1/n = [a;b]. For n<1000, all 1/n are larger than 0.001
+    // --
+    // If 1/n = [a;b] has reptend length r, then (10**r - 1)/n is an integer? Wrong if 2 or 5 divides n.
+    // If n = 2^x 5^y then n has a terminating decimal representation (reptend length = 0).
+    // equivalently 10**r = 1 mod base.
+    //
+
+    extension (n: Int)
+      def without2sAnd5s: Int =
+        if n % 2 == 0 then (n / 2).without2sAnd5s
+        else if n % 5 == 0 then (n / 5).without2sAnd5s
+        else n
+
+    def reptendLength(n: Int, prev: Int, base: Int): Int =
+      assert(n <= base)
+      val next = (prev * 10) % base
+      if next == 1 then n
+      else reptendLength(n + 1, next, base)
+
+    val best = (
+      for
+        c <- (3 to 1000).map(_.without2sAnd5s).distinct
+        if c > 1
+      yield (c, reptendLength(1, 1, c))
+    ).maxBy((_, b) => b)
+
+    best(0)
+  //
   case _: 27 =>
     // INFO: for n*n +  a*n + b to be prime at n=0,
     // we need b to be prime (and positive).
     // We also need a to be odd
     // (else we have for n=1, 1 + a + b which is even so cannot be prime)
-    def numPrimesFromZero(a: Int, b: Int): Int = ???
+
+    def poly(a: Int, b: Int, n: Int) = n * n + a * n + b
+
+    def numPrimesFromZero(a: Int, b: Int): Int =
+      (0 until b).map(poly(a, b, _)).takeWhile(_.isPrime).length
+
+    val (aMax, bMax, _) = (
+      for
+        b <- primes.takeWhile(_ < 1000)
+        a <- (-999 to 999 by 2)
+      yield (a, b, numPrimesFromZero(a, b))
+    ).maxBy((_, _, c) => c)
+
+    aMax * bMax
+
+  case _: 28 =>
+    val sideLength = 1001
+    val numSquares = (sideLength + 1) / 2
+
+    def oddSquares(n: Int) = (2 * n - 1) * (2 * n - 1) // up-right diagonal.
+    def sumOddSquares(n: Int) = n * (4 * n * n - 1) / 3
+    def diag(k: Int)(n: Int): Int =
+      if k <= 0 then oddSquares(n)
+      else diag(k - 1)(n) - 2 * (n - 1)
+
     (for
-      b <- primes.takeWhile(_ < 1000)
-      a <- (-999 to 999 by 2)
-    yield (a, b, numPrimesFromZero(a, b))).max
+      k <- 0 to 3
+      n <- 1 to numSquares
+    yield diag(k)(
+      n
+    )).sum - 3 // INFO: take off 3 for overcounting the initial 1 in the center
+
+  case _: 29 =>
+    def naiveCounter(n: Int) =
+      (for
+        a <- 2 to n
+        b <- 2 to n
+      yield a ** b).distinct.length
+
+    naiveCounter(100)
+
+  case _: 30 =>
+    def pe30(n: Int) = digits(n).map(_ ** 5).sum == n
+    // INFO: no n>=7 digit numbers are possible. 9^5 * 7 = 413,343 which is only 6 digits.
+    (2 to 1000_000).filter(pe30).sum
+
+  case _: 31 =>
+    (for
+      gbp2 <- (0 to 1)
+      gbp1 <- (0 to 2 - 2 * gbp2)
+      p50 <- (0 to 4 - 4 * gbp2 - 2 * gbp1)
+      p20 <- (0 to (20 - 20 * gbp2 - 10 * gbp1 - 5 * p50) / 2)
+      p10 <- (0 to 20 - 10 * gbp1 - 5 * p50 - 2 * p20)
+      p5 <- (0 to 40 - 40 * gbp2 - 20 * gbp1 - 10 * p50 - 4 * p20 - 2 * p10)
+      p2 <-
+        (0 to (200 - 200 * gbp2 - 100 * gbp1 - 50 * p50 - 20 * p20 - 10 * p10 - 5 * p5) / 2)
+    // INFO: the number of one pence coins is fixed by the choice of the other coins
+    yield 1).sum
+
   case x => s"Solution $x is not implemented"
 
 @main def main(problem: Int): Unit =
-  if problem == 0 then for x <- (1 to 25) do main(x)
-  else if problem == -1 then unitTests()
+  if problem == 0 then for x <- (1 to 31) do main(x)
   else pprint(problem, pe(problem))
