@@ -1,17 +1,49 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:186:0 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m186 |[0mend Main[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0mduplicate end marker[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:147:2 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m147 |[0m  dataVar.updater { ([36mdata[0m, [36mnewValue[0m) =>[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m  ^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m  Not found: dataVar[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:178:17 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m178 |[0m    children <-- dataSignal.split(_.id) { ([36mid[0m, [36minitial[0m, [36mitemSignal[0m) =>[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                 ^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                 Not found: dataSignal[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:59:6 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m59 |[0m      renderDataChart(),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m      ^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      Not found: renderDataChart[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- [E129] Potential Issue Warning: /Users/calvinkhor/Documents/GitHub/learning_scala/scalajs-tutorials/livechart/src/main/scala/livechart/LiveChart.scala:63:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 63 |[0m  {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0mA pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 64 |[0m    [33mdef[0m [36mrenderDataChart[0m(): [35mElement[0m =[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 65 |[0m      [33mimport[0m scala.scalajs.js.JSConverters.*[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 66 |[0m      [33mimport[0m typings.chartJs.mod.*[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 67 |[0m      [33mvar[0m [36moptChart[0m: [35mOption[0m[[35mChart[0m] = None[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 68 |[0m      canvasTag([0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 69 |[0m        [34m// Regular properties of the canvas[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 70 |[0m        width := [31m"100%"[0m,[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 71 |[0m        height := [31m"200px"[0m,[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 72 |[0m        [34m// onMountUnmount callback to bridge the Laminar world and the Chart.js world[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 73 |[0m        onMountUnmountCallback([0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 74 |[0m          [34m// on mount, create the `Chart` instance and store it in optChart[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 75 |[0m          mount = { [36mnodeCtx[0m =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 76 |[0m            [33mval[0m [36mdomCanvas[0m: dom.HTMLCanvasElement = nodeCtx.thisNode.ref[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 77 |[0m            [33mval[0m [36mchart[0m = Chart.apply.newInstance2(domCanvas, chartConfig)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 78 |[0m            optChart = Some(chart)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 79 |[0m          },[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 80 |[0m          [34m// on unmount, destroy the `Chart` instance[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 81 |[0m          unmount = { [36mthisNode[0m =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 82 |[0m            [33mfor[0m (chart <- optChart)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 83 |[0m              chart.destroy()[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 84 |[0m            optChart = None[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 85 |[0m          }[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 86 |[0m        ),[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 87 |[0m        [34m// Bridge the FRP world of dataSignal to the imperative world of the `chart.data`[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 88 |[0m        dataSignal --> { [36mdata[0m =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 89 |[0m          [33mfor[0m (chart <- optChart) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 90 |[0m            chart.data.labels = data.map(_.label).toJSArray[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 91 |[0m            chart.data.datasets.get([31m0[0m).data = data.map(_.price).toJSArray[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 92 |[0m            chart.data.datasets.get([31m1[0m).data = data.map(_.fullPrice).toJSArray[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 93 |[0m            chart.update()[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 94 |[0m          }[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 95 |[0m        }[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 96 |[0m      )[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 97 |[0m    [33mend[0m [36mrenderDataChart[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m 98 |[0m  }[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

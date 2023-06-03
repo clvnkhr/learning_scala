@@ -1,44 +1,45 @@
 package livechart
 
 import com.raquo.laminar.api.L.{_, given}
+import livechart.Model
 import org.scalajs.dom
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.*
-import scala.util.Random
-
-final class DataItemID
-
-case class DataItem(id: DataItemID, label: String, price: Double, count: Int):
-  def fullPrice: Double = price * count
-
-object DataItem:
-  def apply(): DataItem =
-    DataItem(
-      DataItemID(),
-      "?",
-      math.floor(Random.nextDouble() * 100) / 100,
-      Random.nextInt(5) + 1
-    )
-end DataItem
-
-type DataList = List[DataItem]
-
-final class Model:
-  val dataVar: Var[DataList] = Var(List(DataItem(DataItemID(), "one", 1.0, 1)))
-  val dataSignal = dataVar.signal
-
-  def addDataItem(item: DataItem): Unit =
-    dataVar.update(data => data :+ item)
-
-  def removeDataItem(id: DataItemID): Unit =
-    dataVar.update(data => data.filter(_.id != id))
-end Model
-// end data model
 
 // import javascriptLogo from "/javascript.svg"
 @js.native @JSImport("/javascript.svg", JSImport.Default)
 val javascriptLogo: String = js.native
+
+val chartConfig =
+  import typings.chartJs.mod.*
+  new ChartConfiguration {
+    `type` = ChartType.bar
+    data = new ChartData {
+      datasets = js.Array(
+        new ChartDataSets {
+          label = "Price"
+          borderWidth = 1
+          backgroundColor = "green"
+        },
+        new ChartDataSets {
+          label = "Full price"
+          borderWidth = 1
+          backgroundColor = "blue"
+        }
+      )
+    }
+    options = new ChartOptions {
+      scales = new ChartScales {
+        yAxes = js.Array(new CommonAxe {
+          ticks = new TickOptions {
+            beginAtZero = true
+          }
+        })
+      }
+    }
+  }
+end chartConfig
 
 @main
 def LiveChart(): Unit =
@@ -55,9 +56,49 @@ object Main:
       h1("Live Chart"),
       hello(),
       renderDataTable(),
+      renderDataChart(),
       renderDataList()
     )
   end appElement
+
+  def renderDataChart(): Element =
+    import scala.scalajs.js.JSConverters.*
+    import typings.chartJs.mod.*
+
+    var optChart: Option[Chart] = None
+
+    canvasTag(
+      // Regular properties of the canvas
+      width := "100%",
+      height := "200px",
+
+      // onMountUnmount callback to bridge the Laminar world and the Chart.js world
+      onMountUnmountCallback(
+        // on mount, create the `Chart` instance and store it in optChart
+        mount = { nodeCtx =>
+          val domCanvas: dom.HTMLCanvasElement = nodeCtx.thisNode.ref
+          val chart = Chart.apply.newInstance2(domCanvas, chartConfig)
+          optChart = Some(chart)
+        },
+        // on unmount, destroy the `Chart` instance
+        unmount = { thisNode =>
+          for (chart <- optChart)
+            chart.destroy()
+          optChart = None
+        }
+      ),
+
+      // Bridge the FRP world of dataSignal to the imperative world of the `chart.data`
+      dataSignal --> { data =>
+        for (chart <- optChart) {
+          chart.data.labels = data.map(_.label).toJSArray
+          chart.data.datasets.get(0).data = data.map(_.price).toJSArray
+          chart.data.datasets.get(1).data = data.map(_.fullPrice).toJSArray
+          chart.update()
+        }
+      }
+    )
+  end renderDataChart
 
   def renderDataTable(): Element =
     table(
@@ -114,9 +155,20 @@ object Main:
           )
         )
       ),
-      td(child.text <-- itemSignal.map(_.price)),
-      td(child.text <-- itemSignal.map(_.count)),
-      td(child.text <-- itemSignal.map(item => "%.2f".format(item.fullPrice))),
+      td(
+        inputForInt(
+          itemSignal.map(_.count),
+          makeDataItemUpdater(
+            id,
+            { (item, newCount) =>
+              item.copy(count = newCount)
+            }
+          )
+        )
+      ),
+      td(
+        child.text <-- itemSignal.map(item => "%.2f".format(item.fullPrice))
+      ),
       td(button("🗑️", onClick --> (_ => removeDataItem(id))))
     )
   end renderDataItem
@@ -150,6 +202,21 @@ object Main:
       onInput.mapToValue --> valueUpdater
     )
   end inputForString
+
+  def inputForInt(
+      valueSignal: Signal[Int],
+      valueUpdater: Observer[Int]
+  ): Input =
+    input(
+      typ := "text",
+      controlled(
+        value <-- valueSignal.map(_.toString),
+        onInput.mapToValue.map(_.toIntOption).collect { case Some(newCount) =>
+          newCount
+        } --> valueUpdater
+      )
+    )
+  end inputForInt
 
   def makeDataItemUpdater[A](
       id: DataItemID,

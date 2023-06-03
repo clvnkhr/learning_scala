@@ -3,6 +3,7 @@ package projecteuler
 import projecteuler.util._
 import projecteuler.numbertheory._
 import scala.runtime.AbstractFunction4
+import scala.util.boundary
 
 def pe(number: Int) = number match
   case _: 1 =>
@@ -21,7 +22,7 @@ def pe(number: Int) = number match
   case _: 3 =>
     divisors(600851475143L).head
 
-  case _: 4 => {
+  case _: 4 => 
     val n = 999
     extension (n: Int)
       def isPalindrome: Boolean =
@@ -35,7 +36,7 @@ def pe(number: Int) = number match
         if (i * j).isPalindrome
       yield i * j
     ).max(using (a, b) => if a > b then 1 else -1)
-  }
+  
 
   case _: 5 =>
     (1 to 20).map(BigInt(_)).foldLeft(BigInt(1))(lcm)
@@ -99,7 +100,7 @@ def pe(number: Int) = number match
       .map(BigInt(_))
       .foldLeft(BigInt(0))(_ + _)
       .toString
-      .take(10)
+      .take(10)// .toLong
 
   case _: 14 => {
     val m: Int = 1000000
@@ -275,7 +276,7 @@ def pe(number: Int) = number match
             p <- canonicalLists(len - 1)
           yield lst(i) :: p.map(lst.take(i) ::: lst.drop(i + 1))
     end lexicoPerm
-    lexicoPerm((0 to 9).toList)(1_000_000 - 1).mkString
+    lexicoPerm((0 to 9).toList)(1_000_000 - 1).mkString //.toLong
 
   case _: 25 =>
     @annotation.tailrec
@@ -369,7 +370,7 @@ def pe(number: Int) = number match
     (2 to 1000_000).filter(pe30).sum
 
   case _: 31 =>
-    (for
+    (for // INFO: no need for dynamic programming...
       gbp2 <- (0 to 1)
       gbp1 <- (0 to 2 - 2 * gbp2)
       p50 <- (0 to 4 - 4 * gbp2 - 2 * gbp1)
@@ -381,8 +382,154 @@ def pe(number: Int) = number match
     // INFO: the number of one pence coins is fixed by the choice of the other coins
     yield 1).sum
 
-  case x => s"Solution $x is not implemented"
+  case _: 32 =>
+    def pandigital(a: Int, b: Int, c: Int): Boolean =
+      val combined = (digits(a) ++ digits(b) ++ digits(c))
+      (1 to 9).forall(x => combined.contains(x))
+
+    assert(pandigital(39, 186, 7254))
+    // INFO:
+    // 5 digit numbers are too big
+    // - abcde = X * Y, we need X and Y to have 4 digits total, either 2 and 2 or 1 and 3.
+    //   but 99 * 99 = 9801 is not 5 digits, similarly 9 * 999 = 8991
+    //
+    // INFO:
+    // 3 digit numbers are too small
+    // - abc = X * Y, we need X and Y to have 6 digits total. But X and Y must be smaller than abc. So X,Y have 3 digits.
+    //   And then X * Y has more than 3, so cannot equal abc.
+    //
+    // INFO:
+    // numbers with repeats or zeros can be skipped
+    (for
+      x <- (1234 to 9876)
+      if factors(x)
+        .filter(_ < math.sqrt(x))
+        .exists(factor => pandigital(x, factor, x / factor))
+    yield x).sum
+
+  case _: 33 =>
+    // INFO:
+    // trivial fractions:
+    // a0/b0, aa/bb, or generally F*a/F*b where a,b= 1...9; F*a,F*b<100.
+    //
+    // INFO:
+    // if we cancel the digit c it cannot be on the same side:
+    // - ca/cb = a/b => ca * b = cb * a => 10*c*b + a*b = 10*c*a + a*b => a=b => a/b = 1 => out of range
+    // - ac/bc = a/b => ac * b = bc * a => 10*a*b + c*b = 10*b*a + c*a => a=b again.
+    //
+    //
+    extension (tup: (Int, Int)) def toInt: Int = 10 * tup(0) + tup(1)
+    val type1 = for
+      c <- (1 to 9)
+      a <- (1 to 9)
+      b <- (a + 1 to 9) // a/b < 1 so we must have b>a
+      // ac/cb = a/b <=> ac*b = cb*a
+      if (a, c).toInt * b == (c, b).toInt * a
+    yield (a, b, c)
+
+    // INFO:
+    // ca/bc = a/b <=> ca*b = a*bc <=> 10*c*b + a*b = 10*a*b + a*c <=> 10*c*b = 9*a*b + a*c.
+    // Not so clear that this is impossible, but true:
+    // a<b => a*c < b*c => 9*a*b + a*c = 10*c*b > 10*a*c => a*b > c*b => a>c.
+    // 9*b*(c-a) + c*b = a*c => 9*b*(a-c) = c*(b-c)
+    // so 9 | RHS. 9 cannot divide c or b-c, so 3|c and 3|b-c.
+    // So c=3 or 6 and b=6 or 9. b=9 makes the LHS too large. c=3 makes the RHS too small.
+    // So c=6 and b=6. But then c=b, which is impossible. QED
+    // Or,
+    // use the empirical test below:
+    //
+    // val type2 = for
+    //   c <- (1 to 9)
+    //   a <- (1 to 9)
+    //   b <- (a + 1 to 9) // a/b < 1 so we must have b>a
+    //   //  ca/bc = a/b <=> ca*b = a*bc
+    //   if (c, a).toInt * b == (b, c).toInt * a
+    // yield (a, b, c)
+    // assert(type2.isEmpty)
+
+    val (num, denom, _) = type1.reduce((x, y) => (x(0) * y(0), x(1) * y(1), 0))
+    denom / gcd(num, denom)
+
+  case _: 34 =>
+    // INFO:
+    // abc...z > 10^(n-1) (exponential) where n is the number of digits.
+    // 9!+9!+...+9! is linear in the number of 9s.
+    // So eventually abc...z > 9!+9!+...+9!.
+    // 10^(n-1) > 9!n when n>7. So we search all x digit numbers, 2<=x<=7.
+    // Slightly beter bound, compare directly x vs 9!(lg x + 1) >= 9! ceil(lg x).
+    // this gives impossibility for x > 2696488.166 (in particular, 6 digits)
+    //
+    // INFO: empirical search shows that n>5 is impossible. Proof?
+
+    // INFO: precompute factorials for speed
+    val factorial = Array(1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880)
+    (for
+      i <- (10 to 2_696_489)
+      if digits(i).map(factorial).sum == i
+    yield i).sum
+
+  case _: 35 =>
+    extension (p: Int)
+      def isCircular: Boolean =
+        def circ(digs: Seq[Int], step: Int): Boolean =
+          if step <= 0 then true
+          else digs.toInt.isPrime && circ(digs.cycle, step - 1)
+        end circ
+        p.isPrime && circ(digits(p).cycle, p.numDigits - 1)
+    end extension
+
+    def circularPrimes(n: Int): Seq[Int] =
+      var acc = Seq[Int]()
+      val bd = (10 ** n).toInt
+
+      for
+        p <- primes.dropWhile(_ < bd / 10).takeWhile(_ < bd)
+        digs = digits(p)
+        if (p < 10 || (!digs.exists(_ % 2 == 0)
+          && !digs.contains(5)))
+          && !acc.contains(p)
+          && p.isCircular
+      do acc = acc ++ (digits(p).cycles.map(_.toInt).distinct)
+
+      return acc
+    end circularPrimes
+
+    (1 to 6).map(circularPrimes(_).length).sum
+
+  case _: 36 =>
+    (for
+      n <- 1 to 999999
+      digs = digits(n)
+      if digs == digs.reverse
+      bins = n.toBinaryString
+      if bins == bins.reverse
+    yield n).sum
+
+  case _: 37 =>
+    // a smarter solution might be to cache and build upwards from 2,3,5,7
+    def rightTrunc(n: Int) = n / 10
+    def leftTrunc(n: Int): Int =
+      val l = n.numDigits
+      n - (n / (10 ** (l - 1)).toInt) * (10 ** (l - 1)).toInt
+    
+    extension(n: Int) def isTruncatable: Boolean =
+        val l = n.numDigits
+        (1 until l).scanLeft(n)((a, _) => rightTrunc(a)).forall(isPrime)
+        && (1 until l).scanLeft(n)((a, _) => leftTrunc(a)).forall(isPrime)
+    
+    var acc = List[Int]()
+    boundary:
+      for
+        p <- primes
+        if digits(p).tail.forall(x => x % 2 != 0 && x != 5) && p.isTruncatable 
+      do
+        acc = (p :: acc)
+        if acc.length == 15 then boundary.break(acc) // including 2,3,5,7
+
+    acc.sum - 17 // subtracting 2+3+5+7
+        
+  case _ => ???
 
 @main def main(problem: Int): Unit =
-  if problem == 0 then for x <- (1 to 31) do main(x)
+  if problem == 0 then for x <- (1 to 37) do main(x)
   else pprint(problem, pe(problem))

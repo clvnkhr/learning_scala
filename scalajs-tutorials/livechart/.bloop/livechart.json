@@ -18,6 +18,10 @@
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.13/1.13.1/scalajs-library_2.13-1.13.1.jar",
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs1_3/2.4.0/scalajs-dom_sjs1_3-2.4.0.jar",
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/raquo/laminar_sjs1_3/15.0.1/laminar_sjs1_3-15.0.1.jar",
+            "/Users/calvinkhor/.ivy2/local/org.scalablytyped/chart_dot_js_sjs1_3/2.9.29-54081c/jars/chart_dot_js_sjs1_3.jar",
+            "/Users/calvinkhor/.ivy2/local/org.scalablytyped/std_sjs1_3/4.9-3bb5e9/jars/std_sjs1_3.jar",
+            "/Users/calvinkhor/.ivy2/local/org.scalablytyped/moment_sjs1_3/2.29.4-5ff6e3/jars/moment_sjs1_3.jar",
+            "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/olvind/scalablytyped-runtime_sjs1_3/2.4.2/scalablytyped-runtime_sjs1_3-2.4.2.jar",
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar",
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-javalib/1.13.1/scalajs-javalib-1.13.1.jar",
             "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/raquo/airstream_sjs1_3/15.0.0/airstream_sjs1_3-15.0.0.jar",
@@ -227,6 +231,74 @@
                             "name": "laminar_sjs1_3",
                             "classifier": "sources",
                             "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/raquo/laminar_sjs1_3/15.0.1/laminar_sjs1_3-15.0.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalablytyped",
+                    "name": "chart_dot_js_sjs1_3",
+                    "version": "2.9.29-54081c",
+                    "configurations": "compile",
+                    "artifacts": [
+                        {
+                            "name": "chart_dot_js_sjs1_3",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/chart_dot_js_sjs1_3/2.9.29-54081c/jars/chart_dot_js_sjs1_3.jar"
+                        },
+                        {
+                            "name": "chart_dot_js_sjs1_3",
+                            "classifier": "sources",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/chart_dot_js_sjs1_3/2.9.29-54081c/srcs/chart_dot_js_sjs1_3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalablytyped",
+                    "name": "std_sjs1_3",
+                    "version": "4.9-3bb5e9",
+                    "configurations": "compile",
+                    "artifacts": [
+                        {
+                            "name": "std_sjs1_3",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/std_sjs1_3/4.9-3bb5e9/jars/std_sjs1_3.jar"
+                        },
+                        {
+                            "name": "std_sjs1_3",
+                            "classifier": "sources",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/std_sjs1_3/4.9-3bb5e9/srcs/std_sjs1_3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalablytyped",
+                    "name": "moment_sjs1_3",
+                    "version": "2.29.4-5ff6e3",
+                    "configurations": "compile",
+                    "artifacts": [
+                        {
+                            "name": "moment_sjs1_3",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/moment_sjs1_3/2.29.4-5ff6e3/jars/moment_sjs1_3.jar"
+                        },
+                        {
+                            "name": "moment_sjs1_3",
+                            "classifier": "sources",
+                            "path": "/Users/calvinkhor/.ivy2/local/org.scalablytyped/moment_sjs1_3/2.29.4-5ff6e3/srcs/moment_sjs1_3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.olvind",
+                    "name": "scalablytyped-runtime_sjs1_3",
+                    "version": "2.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalablytyped-runtime_sjs1_3",
+                            "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/olvind/scalablytyped-runtime_sjs1_3/2.4.2/scalablytyped-runtime_sjs1_3-2.4.2.jar"
+                        },
+                        {
+                            "name": "scalablytyped-runtime_sjs1_3",
+                            "classifier": "sources",
+                            "path": "/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/olvind/scalablytyped-runtime_sjs1_3/2.4.2/scalablytyped-runtime_sjs1_3-2.4.2-sources.jar"
                         }
                     ]
                 },

@@ -3,6 +3,7 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 lazy val livechart = project
   .in(file("."))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
+  .enablePlugins(ScalablyTypedConverterExternalNpmPlugin)
   .settings(
     scalaVersion := "3.2.2",
 
@@ -28,5 +29,10 @@ lazy val livechart = project
      */
     libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0",
     libraryDependencies += "com.raquo" %%% "laminar" % "15.0.1",
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
+
+    // testing framework
+    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
+
+    // Tell ScalablyTyped that we manage `npm install` ourselves
+    externalNpm := baseDirectory.value
   )

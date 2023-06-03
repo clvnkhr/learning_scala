@@ -56,7 +56,8 @@ val primesFrom5: LazyList[Int] = 5 #:: 7 #:: no2no3(11)
 
 extension (n: Int)
   def **(power: Int) = pow(n, power)
-  def isPrime = primesFrom5.takeWhile(_ <= n).contains(n)
+  def isPrime = primes.takeWhile(_ <= n).contains(n)
+  def numDigits: Int = { if n < 0 then -n else n }.toString.length
 
 extension (n: BigInt) def **(power: Int) = pow(n, power)
 
@@ -227,7 +228,23 @@ def gcd(a: BigInt, b: BigInt): BigInt =
   */
 def lcm(a: BigInt, b: BigInt): BigInt = a * b / gcd(a, b)
 
-def digits(n: BigInt) = n.abs.toString.map(_.toString.toInt)
+def digits(n: Int): Seq[Int] = // n.abs.toString.map(_.toString.toInt)
+  def dig1(n: Int, acc: Seq[Int]): Seq[Int] =
+    if n < 10 then n +: acc
+    else dig1(n / 10, n % 10 +: acc)
+  dig1(n, Seq())
+def digits(n: BigInt): Seq[Int] = n.abs.toString.map(_.toString.toInt)
+
+extension (xs: Seq[Int])
+  def toInt: Int =
+    @annotation.tailrec
+    def toInt1(ys: Seq[Int], acc: Int): Int =
+      if ys.isEmpty then acc
+      else toInt1(ys.tail, ys.head + 10 * acc)
+    toInt1(xs, 0)
+  def cycle: Seq[Int] = xs.tail :+ xs.head
+  def cycles: Seq[Seq[Int]] =
+    (1 until xs.length).scanLeft(xs)((xs, _) => xs.cycle)
 
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))
