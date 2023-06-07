@@ -2,8 +2,7 @@ package projecteuler
 
 import projecteuler.util._
 import projecteuler.numbertheory._
-import scala.runtime.AbstractFunction4
-import scala.util.boundary
+import scala.util.boundary, boundary.break
 
 def pe(number: Int) = number match
   case _: 1 =>
@@ -491,7 +490,7 @@ def pe(number: Int) = number match
           && p.isCircular
       do acc = acc ++ (digits(p).cycles.map(_.toInt).distinct)
 
-      return acc
+      acc
     end circularPrimes
 
     (1 to 6).map(circularPrimes(_).length).sum
@@ -524,12 +523,183 @@ def pe(number: Int) = number match
         if digits(p).tail.forall(x => x % 2 != 0 && x != 5) && p.isTruncatable 
       do
         acc = (p :: acc)
-        if acc.length == 15 then boundary.break(acc) // including 2,3,5,7
+        if acc.length == 15 then break(acc) // including 2,3,5,7
 
     acc.sum - 17 // subtracting 2+3+5+7
         
+  case _: 38 =>
+    // INFO: for the concatenated product (CP) of X and (1,...,n), clearly n<10 or there are too many digits
+    // for n = 9, only X=1 works and the CP is the infimal value 123456789.
+    // for n = 8, there are no solutions; once X>1 then 5*X,...,8*X have 2 digits each, for 3 digits too many
+    // for n = 7, similarly we have ≥4 digits 1*X,...4*X, then 5*X, 6*X, 7*X which is ≥6 digits. Too many.
+    // Conclusion: search only for n≤6.
+    //
+    // INFO: we need to make 9 digits. So the sum over i=1...n of floor(lg(i*X))+1 must be 9.
+    // lower/upper bounds:
+    //    L <= sum over i=1...n of floor(lg(i*X))+1 < U, 
+    // where
+    //    L = sum over i=1...n of [lg(i*X)]   = s + n lgX
+    //    U = sum over i=1...n of [lg(i*X)+1] = s + n lgX + n
+    //    s = sum over i=1...n of lg(i)
+    //    find largest X=X1 where U<=9 and the least X=X2 where L>9,
+    //    then check all X in the range X1 to X2
+    //    --
+    //    U<=9 <=> X1 <= 10**(9-s-n)/n
+    //    L>9  <=> X2 > 10**(9-s)/n
+
+    //
+    // INFO: for n>1, X cannot be a multiple of 5, else 2*X has a zero.
+    // INFO: for n>4, X cannot be even, else 5*X has a zero.
+    // 
+    var currMax = 123456789
+    for 
+      n <- (2 to 6)
+      s = (2 to n).map(j => math.log10(j)).sum // log10(1) == 0
+      lo = math.pow(10,(9-s)/n-1) 
+      hi = math.pow(10,(9-s)/n)
+      x <- (math.ceil(lo).toInt to math.floor(hi).toInt)
+      // if (x % 5 != 0 && (n<5 || x % 2 != 0)) // no noticable speedup
+      candidate = (1 to n).flatMap(j => digits(x*j))
+      if (1 to 9).forall(candidate.contains) && candidate.length == 9
+    do 
+      // println(s"$candidate from n=$n, x=$x; s=$s" )
+      currMax = currMax max candidate.toInt
+    currMax
+
+  case _:39 =>
+    val crudeBd = math.ceil(math.sqrt(1000)).toInt
+    // generate all primitive triples which sum to at most 1000, and store their sum
+    // c.f. https://en.wikipedia.org/wiki/Pythagorean_triple
+    val sums = (for 
+      n <- 1 to  crudeBd
+      m <- n+1 to math.ceil((500.toDouble/n).min(1000-n*n)).toInt.min(crudeBd)
+      a = m*m - n*n
+      b = 2*m*n
+      c = m*m + n*n
+      if a+b+c <= 1000
+      if gcd(n,m).toInt == 1 && (m%2 == 0 || n%2 == 0) && (m%2 != 0 || n%2 != 0) 
+    yield 
+      // println(s"n=$n, m=$m, $a $b $c")
+      a+b+c).sorted 
+
+    // count the number of triples with sum p, p=1...1000
+    val numSols = for 
+      p <- sums.head to 1000
+    yield
+      // println(sums.takeWhile(_ <= p).count(p % _ == 0))
+      (p, sums.takeWhile(_ <= p).count(p % _ == 0))
+    numSols.maxBy((_,b)=> b)._1
+
+  case _:40 =>
+    // 1 to 9: 9 digits.
+    // 10 to 99: 2 digits each, 99 - 10 + 1 numbers = 2*90 = 180 digits.     total:   189
+    // 100 to 999: 3 digits each, 999-100+1 numbers = 3*900 = 2700 digits.   total:  2889
+    // 1000 to 9999: 4 digits each, 9999-1000+1 nos = 4*9000 = 36000 digits. total: 38889
+    // 10000 to 99999:                                                             488889
+    // 100000 to 999999:                                                          5888889. 
+    // 488889 + 6 * n = 1_000_000 => n = 85,185.1666666667
+    val cache = (1 to 185186).map(_.toString).mkString
+    (0 to 6).map(i => (10**i).toInt).map(i => cache(i - 1).toString.toInt).product
+     
+  case _:41 => 
+    // INFO: 
+    // there cannot be a 9-pandigital prime, as 1 + ... + 9 = 9*10/2 = 45 = 0 mod 3.
+    // similarly there cannot be a 8-pandigital prime; 8*9/2 = 4*9 = 36 = 0 mod 3.
+    // 7-pandigital: 7*8/2 = 7*4 = 28: possible
+    // 6-pandigital: 6*7/2 = 3*7 = 0 mod 3.
+    // 5-pandigital: 5*6/2 = 5*3 = 0 mod 3.
+    // 4-pandigital: 4*5/2 = 2*5 = 10: possible (indeed 2143 is the given example)
+    // so just find all permutations of 1234567 that are prime, and take the max.
+    // If there are none then we look at the 4-pandigitals...
+    //
+    // val possibleFirstDigits = Seq(1,3,7)
+    // val otherDigits = Seq(2,4,6,5)
+    // (for 
+    //   d1 <- possibleFirstDigits
+    //   ds <- (possibleFirstDigits.filter(_ != d1) ++ otherDigits).permutations
+    //   x = (ds :+ d1).toInt
+    //   if x.isPrime
+    // yield
+    //   x).max
+    // probably faster if we could run our own permutations that drop from the largest to the smallest.
+
+    // it is faster to compute all 7 digit primes and check digits
+    primes.dropWhile( _ < 1_000_000).takeWhile( _ < 10_000_000).filter(p => (1 to 7).forall(digits(p).contains(_))).last
+
+  case _:42 =>
+    val home = java.io.File(".").getAbsolutePath().dropRight(1)
+    val bufferedSource =
+      io.Source.fromFile(s"${home}src/main/scala/pe042words.txt")
+    val potentialTriangles = bufferedSource.getLines.mkString
+      .filter(_ != '"')
+      .split(',')
+      .map(s => s.map(c => c.toInt - 'A'.toInt + 1).sum)
+    bufferedSource.close
+    
+    val max = potentialTriangles.max
+    
+    val triangles = from(1,1).map(sumTo).takeWhile( _ <= max)
+
+    (for 
+      pt <- potentialTriangles
+      if triangles.contains(pt)
+    yield 
+      1).sum
+
+  case _:43 =>
+    // INFO:
+    // d2d3d4  div by 2  : d4 % 2 == 0: d4=0,2,4,6,8
+    // d3d4d5  div by 3  : d3 + d4 + d5 % 3 == 0
+    // d4d5d6  div by 5  : d6 % 5 == 0
+    // d5d6d7  div by 7  : d5d6 = 2*d7 mod 7
+    // d6d7d8  div by 11 : d6>0 and (d6+d8<9 and d7=d6+d8 or d6+d8>9 and d6+d8-10=d7) or (d6=0 and d7=d8)
+    // d7d8d9  div by 13 : make a table
+    // d8d9d10 div by 17 : make a table
+    //
+    // INFO: d1,d2,d3 are free, probably we require d1>0
+
+    //
+    def neq(is: Int*)(j: Int) = is.forall(i => i!=j)
+    
+    (for 
+
+      d3 <- (0 to 9)
+      d4 <- (0 to 9 by 2)                         // 234 div by 2
+      if neq(d3)(d4)
+      d6 = 5                         // 456 div by 5: see d8 condition below
+      if neq(d3,d4)(d6)
+      d5 <- (0 to 9)                              // 345 div by 3
+      if neq(d3,d4,d6)(d5)
+      if ((d3 + d4 + d5) % 3 == 0)
+      d7 <- (0 to 9)                              // 567 div by 7
+      if neq(d3,d4,d5,d6)(d7)
+      if((10*d5 + d6 - 2*d7) % 7 == 0)
+      d8 <- (0 to 9)                              // 678 div by 11
+      if neq(d3,d4,d5,d6,d7)(d8)
+      if d6 + d8 == d7 || d6 + d8 - 11 == d7
+      d9 <- (0 to 9)                              // 789 div by 13
+      if neq(d3,d4,d5,d6,d7,d8)(d9) && ( Seq(d7,d8,d9).toInt % 13 == 0 )
+      d10 <- (0 to 9)                             // 89 10 div by 17
+      if neq(d3,d4,d5,d6,d7,d8,d9)(d10) && (Seq(d8,d9,d10).toInt % 17 == 0)
+      d1 <- (1 to 9)
+      if neq(d3,d4,d5,d6,d7,d8,d9,d10)(d1)
+      d2 <- (0 to 9)
+      if neq(d3,d4,d5,d6,d7,d8,d9,d10,d1)(d2)
+      ds = Seq(d1,d2,d3,d4,d5,d6,d7,d8,d9,d10)
+      if (0 to 9).forall(i => ds.contains(i))
+    yield 
+       BigInt(ds.mkString)
+    ).sum
+      
+
+    // 16695334890 <-
+    // 49803145542 <- d1 from 1
+    // 51137051004 <- d1 from 0
+    // 1406357289
   case _ => ???
 
 @main def main(problem: Int): Unit =
-  if problem == 0 then for x <- (1 to 37) do main(x)
+  if problem == 0 then for x <- (1 to 40) do main(x)
   else pprint(problem, pe(problem))
+
+

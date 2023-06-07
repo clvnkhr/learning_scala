@@ -246,6 +246,27 @@ extension (xs: Seq[Int])
   def cycles: Seq[Seq[Int]] =
     (1 until xs.length).scanLeft(xs)((xs, _) => xs.cycle)
 
+type Row = Vector[Int]
+type Matrix = Vector[Row]
+
+extension (m: Matrix)
+  def numCols = m.length
+  def numRows = m(0).length
+  def *(n: Matrix): Matrix =
+    require(m.numCols == n.numRows)
+    (0 until m.numRows)
+      .map(i =>
+        (0 until n.numCols)
+          .map(k =>
+            (0 until m.numCols)
+              .map(j => m(i)(j) * n(j)(k))
+              .sum
+          )
+          .toVector
+      )
+      .toVector
+end extension
+
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))
   println((0 to 10).map(pow(2, _)))
