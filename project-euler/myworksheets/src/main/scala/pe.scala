@@ -685,23 +685,21 @@ def pe(number: Int) = number match
       d7 <- (0 to 9) // 567 div by 7
       if neq(d3, d4, d5, d6)(d7)
       if ((10 * d5 + d6 - 2 * d7) % 7 == 0)
-      d8 <- (0 to 9) // 678 div by 11
+      d8 <- (0 to 9) // 678 div by 11; since no repeated digits, d6!=0
       if neq(d3, d4, d5, d6, d7)(d8)
       if d6 + d8 == d7 || d6 + d8 - 11 == d7
       d9 <- (0 to 9) // 789 div by 13
-      if neq(d3, d4, d5, d6, d7, d8)(d9) && (Seq(d7, d8, d9).toInt % 13 == 0)
+      if neq(d3, d4, d5, d6, d7, d8)(d9)
+        && (Seq(d7, d8, d9).toInt % 13 == 0)
       d10 <- (0 to 9) // 89 10 div by 17
-      if neq(d3, d4, d5, d6, d7, d8, d9)(d10) && (Seq(
-        d8,
-        d9,
-        d10
-      ).toInt % 17 == 0)
+      if neq(d3, d4, d5, d6, d7, d8, d9)(d10)
+        && (Seq(d8, d9, d10).toInt % 17 == 0)
       d1 <- (1 to 9)
       if neq(d3, d4, d5, d6, d7, d8, d9, d10)(d1)
       d2 <- (0 to 9)
       if neq(d3, d4, d5, d6, d7, d8, d9, d10, d1)(d2)
+      // above line implies that all digits are used
       ds = Seq(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10)
-      if (0 to 9).forall(i => ds.contains(i))
     yield BigInt(ds.mkString)).sum
 
   case _: 44 =>
@@ -741,6 +739,57 @@ def pe(number: Int) = number match
 
   case _: 48 =>
     (1 to 1000).map(i => BigInt(i) ** i).sum.toString.takeRight(10)
+
+  case _: 49 =>
+    val candidatePrimes = primes.dropWhile(_ < 1_000).takeWhile(_ < 10_000)
+    (for
+      p <- candidatePrimes
+      k <-
+        (candidatePrimes.tail.head - candidatePrimes.head to (10_000 - p) / 2)
+      digs = digits(p).sorted
+      if digits(p + k).sorted == digs
+        && digits(p + 2 * k).sorted == digs
+        && candidatePrimes
+          .dropWhile(q => q < p + k)
+          .head == p + k
+        && candidatePrimes
+          .dropWhile(q => q < p + 2 * k)
+          .head == p + 2 * k
+    yield s"$p${p + k}${p + 2 * k}").tail.head
+
+  case _: 50 =>
+    // INFO:
+    // step1 sum from 2 until we hit 1_000_000
+    // step2 sum from 3 until we hit 1_000_000, going two primes at a time
+    // number of primes we need: primes are increasing.
+    // So it is not possible to use two primes larger than 500_000, 3 primes larger than 333_333, or n primes all larger than 1_000_000/n.
+    //
+    val primesWithIndex = primes.zipWithIndex
+
+    val maxFrom2 = primesWithIndex
+      .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1))
+      // off-by-one for number of primes
+      .takeWhile(_(0) < 1_000_000)
+      .filter(_(0).isPrime)
+      .last
+
+    val maxFroms =
+      for
+        // INFO: any prime larger than 1_000_000 / maxFrom2._2 cannot beat the number of conseq. sums from 2.
+        p <- primesWithIndex.tail.takeWhile(_._1 < 1_000_000 / maxFrom2._2)
+        candidates = primesWithIndex
+          .drop(p(1))
+          // INFO: compute the consecutive sum starting from p. note off-by-one in indexing
+          .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1 - p(1)))
+          // INFO: if it doesn't beat the streak starting from 2, we ignore. Also, jump twice.
+          .filter(t => t._2 > maxFrom2._2 && t._2 % 2 != 0)
+          .takeWhile(_(0) < 1_000_000)
+          .filter(_(0).isPrime)
+        if !candidates.isEmpty
+      yield
+        val temp = candidates.last
+        (p._1, temp._1, temp._2)
+    ((2, maxFrom2._1, maxFrom2._2) #:: maxFroms).maxBy(_._3)._2
 
   case _ => ???
 

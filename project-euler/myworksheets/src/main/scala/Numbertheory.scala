@@ -11,7 +11,7 @@ package numbertheory
   */
 def from(n: Int, jump: Int): LazyList[Int] = n #:: from(n + jump, jump)
 
-/** Helper function to speed up the primes lazylist.
+/** Helper function to speed up the primes lazylist a little.
   * @param n
   *   a number of the form 5 + 6 k (we do not verify this)
   * @return

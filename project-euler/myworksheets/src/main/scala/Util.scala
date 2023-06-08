@@ -10,11 +10,13 @@ def pprint(n: Int, any: => Any): Unit =
 
   val elapsed = (t1 - t0) * 1.0e-6
 
-  val elapsedColor =
-    if elapsed < 200 then elapsed.toString
-    else Console.RED ++ elapsed.toString ++ Console.RESET
+  val elapsedColor = {
+    if elapsed > 1000 then Console.RED ++ Console.BOLD
+    else if elapsed > 300 then Console.RED
+    else ""
+  } ++ elapsed.toString ++ Console.RESET
   println(
-    f"PE$n%03d:" ++ Console.BOLD ++ s"$ans    " ++ Console.RESET ++ s"Elapsed time: $elapsedColor ms"
+    f"PE$n%03d: " ++ Console.BOLD ++ s"$ans" ++ Console.RESET ++ s" in $elapsedColor ms"
   )
 
 def time[R](repetitions: Int, name: String, block: => R): Double =
