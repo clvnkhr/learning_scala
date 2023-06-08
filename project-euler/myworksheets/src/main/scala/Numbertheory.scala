@@ -32,6 +32,25 @@ def sumFifthPowers(n: Int): BigInt = {
   val a = sumTo(n); a * a * (4 * a - 1) / 3
 }
 
+extension (p: Long)
+  def isTri: Boolean =
+    // INFO: A triangular number is a number of the form n(n+1)/2.
+    // if p = n(n+1)/2 then 2p = n**2 + n, so
+    // n = -1/2 ± sqrt(1 + 8p)/2. Take the positive number
+    val s = math.sqrt(8 * p + 1)
+    s.isWhole && (s.toLong - 1) % 2 == 0
+
+  def isPent: Boolean =
+    // INFO: stolen from wikipedia.
+    // A pentagonal number is a number of the form n(3n-1)/2.
+    val s = math.sqrt(24 * p + 1)
+    s.isWhole && (s.toLong + 1) % 6 == 0
+
+  def isHex: Boolean = ???
+  // INFO: A hex number is a number of the form n(2n-1).
+  // if p = n(2n-1) then 0 = 2 n**2 - n - p, so
+  // n = 1/4 ± sqrt(1 + 8p)/4. Take the positive number
+
 /** A slightly faster than normal lazylist of primes computed by trial division.
   */
 val primes: LazyList[Int] = 2 #:: 3 #:: primesFrom5
