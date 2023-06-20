@@ -33,28 +33,35 @@ def sumFifthPowers(n: Int): BigInt = {
 }
 
 extension (p: Long)
+  /** check if the Long is a triangular number, i.e. a number of the form
+    * n(n+1)/2.
+    *
+    * @returns
+    *   true if triangular, false otherwise.
+    */
   def isTri: Boolean =
-    // INFO: A triangular number is a number of the form n(n+1)/2.
     // if p = n(n+1)/2 then 2p = n**2 + n, so
     // n = -1/2 ± sqrt(1 + 8p)/2. Take the positive number
     val s = math.sqrt(8 * p + 1)
     s.isWhole && (s.toLong - 1) % 2 == 0
 
+  /** check if the Long is a pentagonal number, i.e. a number of the form
+    * n(3n-1)/2.
+    *
+    * @returns
+    *   true if pentagonal, false otherwise.
+    */
   def isPent: Boolean =
-    // INFO: stolen from wikipedia.
     // A pentagonal number is a number of the form n(3n-1)/2.
     val s = math.sqrt(24 * p + 1)
     s.isWhole && (s.toLong + 1) % 6 == 0
-
-  def isHex: Boolean = ???
-  // INFO: A hex number is a number of the form n(2n-1).
-  // if p = n(2n-1) then 0 = 2 n**2 - n - p, so
-  // n = 1/4 ± sqrt(1 + 8p)/4. Take the positive number
 
 /** A slightly faster than normal lazylist of primes computed by trial division.
   */
 val primes: LazyList[Int] = 2 #:: 3 #:: primesFrom5
 
+/** Auxilliary list of primes starting from 5.
+  */
 val primesFrom5: LazyList[Int] = 5 #:: 7 #:: no2no3(11)
   .filter(k => primesFrom5.takeWhile(_ <= math.sqrt(k)).forall(k % _ != 0))
 
@@ -80,7 +87,7 @@ extension (n: Int)
 
 extension (n: BigInt) def **(power: Int) = pow(n, power)
 
-/** not so naive version of the power function, pow(n,power) := n^power.
+/** not so naive version of the integer power function, pow(n,power) := n^power.
   * Repeated squaring means that the number of multiplications is logarithmic in
   * the power.
   *
@@ -88,9 +95,6 @@ extension (n: BigInt) def **(power: Int) = pow(n, power)
   * @param power
   * @return
   */
-
-// def pow(n: Double, power: Double): Double = math.pow(n, power)
-
 def pow(n: BigInt, power: Int): BigInt =
   require(power >= 0)
   @annotation.tailrec
@@ -153,6 +157,12 @@ def divisors(n: Long): List[Long] =
     else divisors1(n, k + 1, acc)
   divisors1(n, 0, Nil)
 
+/** A map whose keys are the prime factors of n, and the values are the
+  * multiplicities
+  *
+  * @param n
+  * @return
+  */
 def factorization(n: BigInt): Map[Int, Int] =
   @annotation.tailrec
   def factor1(n: BigInt, factors: Map[Int, Int]): Map[Int, Int] =
@@ -164,16 +174,16 @@ def factorization(n: BigInt): Map[Int, Int] =
       factor1(n / minPrime, newFactors)
   factor1(n, Map())
 
-def factorization(n: Int): Map[Int, Int] =
-  @annotation.tailrec
-  def factor1(n: Int, factors: Map[Int, Int]): Map[Int, Int] =
-    if n == 1 then factors.withDefaultValue(0)
-    else
-      val minPrime = primes.filter(n % _ == 0).head
-      val newFactors =
-        factors.updated(minPrime, factors.getOrElse(minPrime, 0) + 1)
-      factor1(n / minPrime, newFactors)
-  factor1(n, Map())
+// def factorization(n: Int): Map[Int, Int] =
+//   @annotation.tailrec
+//   def factor1(n: Int, factors: Map[Int, Int]): Map[Int, Int] =
+//     if n == 1 then factors.withDefaultValue(0)
+//     else
+//       val minPrime = primes.filter(n % _ == 0).head
+//       val newFactors =
+//         factors.updated(minPrime, factors.getOrElse(minPrime, 0) + 1)
+//       factor1(n / minPrime, newFactors)
+//   factor1(n, Map())
 
 def factorizationToNumber(factors: Map[Int, Int]) =
   factors.map((prime, pows) => pow(prime, pows)).foldLeft(BigInt(1))(_ * _)
@@ -264,27 +274,6 @@ extension (xs: Seq[Int])
   def cycle: Seq[Int] = xs.tail :+ xs.head
   def cycles: Seq[Seq[Int]] =
     (1 until xs.length).scanLeft(xs)((xs, _) => xs.cycle)
-
-type Row = Vector[Int]
-type Matrix = Vector[Row]
-
-extension (m: Matrix)
-  def numCols = m.length
-  def numRows = m(0).length
-  def *(n: Matrix): Matrix =
-    require(m.numCols == n.numRows)
-    (0 until m.numRows)
-      .map(i =>
-        (0 until n.numCols)
-          .map(k =>
-            (0 until m.numCols)
-              .map(j => m(i)(j) * n(j)(k))
-              .sum
-          )
-          .toVector
-      )
-      .toVector
-end extension
 
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))

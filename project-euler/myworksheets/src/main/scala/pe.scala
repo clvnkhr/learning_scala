@@ -260,7 +260,6 @@ def pe(number: Int) = number match
   // solution with distinct is faster than toSet (!)
 
   case _: 24 =>
-    // WARNING: quite slow
     // TODO: redo with pure math
     lazy val canonicalLists = (0 to 10).map(i => lexicoPerm((0 until i).toList))
     def lexicoPerm[A](lst: List[A]): LazyList[List[A]] =
@@ -518,6 +517,7 @@ def pe(number: Int) = number match
         && (1 until l).scanLeft(n)((a, _) => leftTrunc(a)).forall(isPrime)
 
     var acc = List[Int]()
+    // testing out boundary-break (Scala3.3 LTS) since we are not given any guarantees that 15 should be the end
     boundary {
       for
         p <- primes
@@ -781,7 +781,7 @@ def pe(number: Int) = number match
           .drop(p(1))
           // INFO: compute the consecutive sum starting from p. note off-by-one in indexing
           .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1 - p(1)))
-          // INFO: if it doesn't beat the streak starting from 2, we ignore. Also, jump twice.
+          // INFO: if it doesn't beat the streak starting from 2, we don't need to check if it's prime. Also, jump twice.
           .filter(t => t._2 > maxFrom2._2 && t._2 % 2 != 0)
           .takeWhile(_(0) < 1_000_000)
           .filter(_(0).isPrime)
@@ -790,7 +790,16 @@ def pe(number: Int) = number match
         val temp = candidates.last
         (p._1, temp._1, temp._2)
     ((2, maxFrom2._1, maxFrom2._2) #:: maxFroms).maxBy(_._3)._2
-
+  case _: 52 =>
+    (for
+      x <- (100_000 until 1_000_000 / 6).to(LazyList)
+      digs = digits(x).sorted
+      if digits(6 * x).sorted == digs
+        && digits(5 * x).sorted == digs
+        && digits(4 * x).sorted == digs
+        && digits(3 * x).sorted == digs
+        && digits(2 * x).sorted == digs
+    yield x).head
   case _ => ???
 
 @main def main(args: Int*): Unit =
