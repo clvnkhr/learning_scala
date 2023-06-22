@@ -1,5 +1,4 @@
-/**
-  * Copyright (C) 2009-2015 Typesafe Inc. <http://www.typesafe.com>
+/** Copyright (C) 2009-2015 Typesafe Inc. <http://www.typesafe.com>
   */
 package actorbintree:
 
@@ -26,16 +25,19 @@ package actorbintree:
           expectedReplies: Seq[OperationReply]
       ): Unit =
         requester.within(5.seconds) {
-          val repliesUnsorted = for i <- 1 to ops.size yield try
-            requester.expectMsgType[OperationReply]
-          catch
-            case ex: Throwable if ops.size > 10 =>
-              sys.error(s"failure to receive confirmation $i/${ops.size}\n$ex")
-            case ex: Throwable =>
-              sys.error(
-                s"failure to receive confirmation $i/${ops.size}\nRequests:" + ops
-                  .mkString("\n    ", "\n     ", "") + s"\n$ex"
-              )
+          val repliesUnsorted =
+            for i <- 1 to ops.size
+            yield try requester.expectMsgType[OperationReply]
+            catch
+              case ex: Throwable if ops.size > 10 =>
+                sys.error(
+                  s"failure to receive confirmation $i/${ops.size}\n$ex"
+                )
+              case ex: Throwable =>
+                sys.error(
+                  s"failure to receive confirmation $i/${ops.size}\nRequests:" + ops
+                    .mkString("\n    ", "\n     ", "") + s"\n$ex"
+                )
           val replies = repliesUnsorted.sortBy(_.id)
           if replies != expectedReplies then
             val pairs = (replies zip expectedReplies).zipWithIndex filter (x =>
@@ -50,7 +52,11 @@ package actorbintree:
             )
         }
 
-      def verify(probe: TestProbe, ops: Seq[Operation], expected: Seq[OperationReply]): Unit =
+      def verify(
+          probe: TestProbe,
+          ops: Seq[Operation],
+          expected: Seq[OperationReply]
+      ): Unit =
         val topNode = system.actorOf(Props[BinaryTreeSet]())
 
         ops foreach { op =>
@@ -97,7 +103,6 @@ package actorbintree:
 
         verify(requester, ops, expectedReplies)
       }
-
 
       test("behave identically to built-in set (includes GC) (40pts)") {
         val rnd = Random()
