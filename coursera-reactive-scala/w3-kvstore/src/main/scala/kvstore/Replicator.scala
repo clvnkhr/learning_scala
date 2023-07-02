@@ -47,7 +47,7 @@ class Replicator(val replica: ActorRef) extends Actor:
       ackRef ! Replicated(key, id)
 
   context.system.scheduler.scheduleAtFixedRate(0.millis, 100.millis) { () =>
-    acks.foreach { case (seq, (_, Replicate(key, valueOption, id))) =>
+    acks.foreach { case (seq, (_, Replicate(key, valueOption, _))) =>
       replica ! Snapshot(key, valueOption, seq)
     }
   }
