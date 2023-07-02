@@ -55,11 +55,20 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
   // the current set of replicators
   var replicators = Set.empty[ActorRef]
 
-  var persists = Map.empty[Long, (ActorRef, Persist)]
-  var persistChecks = Map.empty[Long, Cancellable]
-  def persistTimer(id: Long) = if persists.contains(id) then
-    persists(id)(0) ! OperationFailed(id)
-    persists = persists - id
+  var unsent = Map.empty[Long, (ActorRef, Option[Persist], Option[Replicate])]
+  var checks = Map.empty[Long, Cancellable]
+
+  def checkForFailure(id: Long) = if unsent.contains(id) then
+    unsent(id)(0) ! OperationFailed(id)
+    unsent = unsent - id
+
+  def ackAttempt(id: Long) = unsent(id) match
+    case (sender, None, None) =>
+      checks(id).cancel()
+      sender ! OperationAck(id)
+      checks = checks - id
+      unsent = unsent - id
+    case _ => ()
 
   def receive =
     case JoinedPrimary   => context.become(leader)
@@ -88,28 +97,41 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
 
     case Insert(key, value, id) =>
       kv = kv + (key -> value)
-      replicators.foreach(_ ! Replicate(key, Some(value), id))
-      persists = persists + (id -> (sender(), Persist(key, Some(value), id)))
-      val persistCheck =
-        context.system.scheduler.scheduleOnce(1.second)(persistTimer(id))
-      persistChecks = persistChecks + (id -> persistCheck)
+      unsent = unsent + (id -> (
+        sender(),
+        Some(Persist(key, Some(value), id)),
+        if replicators.nonEmpty then Some(Replicate(key, Some(value), id))
+        else None
+      ))
+
+      val check =
+        context.system.scheduler.scheduleOnce(1.second)(checkForFailure(id))
+      checks = checks + (id -> check)
 
     case Remove(key, id) =>
       kv = kv - key
-      replicators.foreach(_ ! Replicate(key, None, id))
-      persists = persists + (id -> (sender(), Persist(key, None, id)))
-      val persistCheck =
-        context.system.scheduler.scheduleOnce(1.second)(persistTimer(id))
-      persistChecks = persistChecks + (id -> persistCheck)
+      unsent = unsent + (id -> (
+        sender(),
+        Some(Persist(key, None, id)),
+        if replicators.nonEmpty then Some(Replicate(key, None, id)) else None
+      ))
+
+      val check =
+        context.system.scheduler.scheduleOnce(1.second)(checkForFailure(id))
+      checks = checks + (id -> check)
 
     case Get(key, id) =>
       sender() ! GetResult(key, kv.get(key), id)
 
     case Persisted(key, id) =>
-      persists(id)(0) ! OperationAck(id)
-      persistChecks(id).cancel()
-      persists = persists - id
-      persistChecks = persistChecks - id
+      val prev = unsent(id)
+      unsent = unsent + (id -> (prev(0), None, prev(2)))
+      ackAttempt(id)
+
+    case Replicated(key, id) =>
+      val prev = unsent(id)
+      unsent = unsent + (id -> (prev(0), prev(1), None))
+      ackAttempt(id)
 
   end leader
 
@@ -127,16 +149,14 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
             kv = kv - key
           case Some(value) =>
             kv = kv + (key -> value)
-        persists =
-          persists + (seq -> (sender(), Persist(key, valueOption, seq)))
+        unsent = unsent + (seq -> (sender(),
+        Some(Persist(key, valueOption, seq)),
+        None))
       else ()
     case Persisted(key, id) =>
-      persists(id)(0) ! SnapshotAck(key, id)
-      persists = persists - id
+      unsent(id)(0) ! SnapshotAck(key, id)
+      unsent = unsent - id
   end replica
-
-  override val supervisorStrategy: SupervisorStrategy = OneForOneStrategy():
-    case _: PersistenceException => Restart
 
   // register with the arbiter
   arbiter ! Join
@@ -144,9 +164,16 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
   // make a Persistence actor
   var persister = context.actorOf(persistenceProps)
 
-  // repeatedly ask the Persistence actor to reply with Persisted
+  override val supervisorStrategy: SupervisorStrategy = OneForOneStrategy():
+    case _: PersistenceException => Restart
+
+  // repeatedly ask the Persistence actor to reply with Persisted,
+  // and the replicators to reply with Replicated
   context.system.scheduler.scheduleAtFixedRate(0.millis, 100.millis) { () =>
-    persists.foreach { case (seq, (_, p: Persist)) =>
-      persister ! p
+    unsent.foreach {
+      case (_, (_, op: Option[Persist], or: Option[Replicate])) =>
+        // println(s"[op,or]=[$op,$or], replicators = $replicators")
+        op.foreach(p => persister ! p)
+        or.foreach(r => replicators.foreach(reptrs => reptrs ! r))
     }
   }
