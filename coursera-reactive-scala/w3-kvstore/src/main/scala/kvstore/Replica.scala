@@ -67,6 +67,25 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
 
   /* TODO Behavior for  the leader role. */
   val leader: Receive =
+    case Replicas(replicas) =>
+      // NOTE: remove replicators whose replicas that have left the system
+      for
+        (replica, replicator) <- secondaries
+        if !replicas.contains(replica)
+      do
+        replicator ! PoisonPill
+        secondaries = secondaries - replica
+        replicators = replicators - replicator
+
+      // NOTE: add new replicas and start new replicators for them
+      for
+        replica <- replicas
+        if !secondaries.contains(replica)
+      do
+        val newReplicator = context.actorOf(Replicator.props(replica))
+        secondaries += (replica -> newReplicator)
+        replicators = replicators + newReplicator
+
     case Insert(key, value, id) =>
       kv = kv + (key -> value)
       replicators.foreach(_ ! Replicate(key, Some(value), id))
@@ -86,32 +105,23 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
     case Get(key, id) =>
       sender() ! GetResult(key, kv.get(key), id)
 
-    case Replicas(replicas) =>
-      // TODO: need to consider how to remove replicas that exit the system
-      for
-        replica <- replicas
-        if !secondaries.contains(replica)
-      do
-        val newReplicator = context.actorOf(Replicator.props(replica))
-        secondaries += (replica -> newReplicator)
-        replicators = replicators + newReplicator
-
     case Persisted(key, id) =>
       persists(id)(0) ! OperationAck(id)
       persistChecks(id).cancel()
       persists = persists - id
+      persistChecks = persistChecks - id
 
-    case _ => ???
+  end leader
 
   /* TODO Behavior for the replica (secondary) role. */
-  val replica: Receive = {
+  val replica: Receive =
     case Get(key, id) =>
       sender() ! GetResult(key, kv.get(key), id)
 
     case Snapshot(key, valueOption, seq) =>
       if seq < nextSeq then sender() ! SnapshotAck(key, seq)
       else if seq == nextSeq then
-        nextSeq += 1 // TODO: change this maybe? not working
+        nextSeq += 1
         valueOption match
           case None =>
             kv = kv - key
@@ -119,16 +129,14 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
             kv = kv + (key -> value)
         persists =
           persists + (seq -> (sender(), Persist(key, valueOption, seq)))
-        // sender() ! SnapshotAck(key, seq)
       else ()
     case Persisted(key, id) =>
       persists(id)(0) ! SnapshotAck(key, id)
       persists = persists - id
-  }
+  end replica
 
-  override val supervisorStrategy: SupervisorStrategy = OneForOneStrategy() {
+  override val supervisorStrategy: SupervisorStrategy = OneForOneStrategy():
     case _: PersistenceException => Restart
-  }
 
   // register with the arbiter
   arbiter ! Join
