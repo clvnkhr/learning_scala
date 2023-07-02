@@ -55,7 +55,11 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
   // the current set of replicators
   var replicators = Set.empty[ActorRef]
 
-  var unsent = Map.empty[Long, (ActorRef, Option[Persist], Option[Replicate])]
+  var unsent =
+    Map.empty[
+      Long,
+      (ActorRef, Option[Persist], Option[Replicate], Set[ActorRef])
+    ]
   var checks = Map.empty[Long, Cancellable]
 
   def checkForFailure(id: Long) = if unsent.contains(id) then
@@ -63,7 +67,7 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
     unsent = unsent - id
 
   def ackAttempt(id: Long) = unsent(id) match
-    case (sender, None, None) =>
+    case (sender, None, _, set) if set.isEmpty =>
       checks(id).cancel()
       sender ! OperationAck(id)
       checks = checks - id
@@ -100,8 +104,8 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
       unsent = unsent + (id -> (
         sender(),
         Some(Persist(key, Some(value), id)),
-        if replicators.nonEmpty then Some(Replicate(key, Some(value), id))
-        else None
+        Some(Replicate(key, Some(value), id)),
+        replicators
       ))
 
       val check =
@@ -113,7 +117,8 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
       unsent = unsent + (id -> (
         sender(),
         Some(Persist(key, None, id)),
-        if replicators.nonEmpty then Some(Replicate(key, None, id)) else None
+        Some(Replicate(key, None, id)),
+        replicators
       ))
 
       val check =
@@ -125,13 +130,17 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
 
     case Persisted(key, id) =>
       val prev = unsent(id)
-      unsent = unsent + (id -> (prev(0), None, prev(2)))
+      unsent = unsent + (id -> (prev(0), None, prev(2), prev(3)))
       ackAttempt(id)
 
     case Replicated(key, id) =>
       val prev = unsent(id)
-      unsent = unsent + (id -> (prev(0), prev(1), None))
+      unsent = unsent + (id -> (prev(0), prev(1), prev(2), prev(3) - sender()))
       ackAttempt(id)
+
+    case Snapshot(_, _, _) => ()
+    // INFO: this case is needed since the Replicator sends the Snapshot
+    // message to all replicators which somehow includes this one
 
   end leader
 
@@ -149,9 +158,14 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
             kv = kv - key
           case Some(value) =>
             kv = kv + (key -> value)
-        unsent = unsent + (seq -> (sender(),
-        Some(Persist(key, valueOption, seq)),
-        None))
+        unsent = unsent + (
+          seq -> (
+            sender(),
+            Some(Persist(key, valueOption, seq)),
+            None,
+            Set.empty
+          )
+        )
       else ()
     case Persisted(key, id) =>
       unsent(id)(0) ! SnapshotAck(key, id)
@@ -171,9 +185,10 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
   // and the replicators to reply with Replicated
   context.system.scheduler.scheduleAtFixedRate(0.millis, 100.millis) { () =>
     unsent.foreach {
-      case (_, (_, op: Option[Persist], or: Option[Replicate])) =>
+      case _ ->
+          (_, op: Option[Persist], or: Option[Replicate], sar: Set[ActorRef]) =>
         // println(s"[op,or]=[$op,$or], replicators = $replicators")
         op.foreach(p => persister ! p)
-        or.foreach(r => replicators.foreach(reptrs => reptrs ! r))
+        or.foreach(r => sar.foreach(ar => ar ! r))
     }
   }
