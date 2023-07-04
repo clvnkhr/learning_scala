@@ -42,9 +42,10 @@ class Replicator(val replica: ActorRef) extends Actor:
       acks = acks + (nextSeq() -> (sender(), Replicate(key, valueOption, id)))
 
     case SnapshotAck(key, seq) =>
-      val (ackRef, Replicate(_, _, id)) = acks(seq)
-      acks = acks - seq
-      ackRef ! Replicated(key, id)
+      for (ackRef: ActorRef, Replicate(_, _, id)) <- acks.get(seq)
+      do
+        acks = acks - seq
+        ackRef ! Replicated(key, id)
 
   context.system.scheduler.scheduleAtFixedRate(0.millis, 100.millis) { () =>
     acks.foreach { case (seq, (_, Replicate(key, valueOption, _))) =>
