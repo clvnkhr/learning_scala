@@ -50,12 +50,15 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
   var nextSeq = 0L
 
   var kv = Map.empty[String, String]
-  // a map from secondary replicas to replicators
-  //
-  var ki = Map.empty[String, Long]
   // INFO: In order to init each new replica,
   // I need to keep track of the id of the most recent request for that kv pair
   // so that I do not overwrite other requests and know how to react correctly.
+  // This is a separate var from kv only because kv was supplied as part of the original suggestion
+  // But they are always updated in lockstep
+  var ki = Map.empty[String, Long]
+
+  //
+  // a map from secondary replicas to replicators
   var secondaries = Map.empty[ActorRef, ActorRef]
   // the current set of replicators
   var replicators = Set.empty[ActorRef]
@@ -68,7 +71,7 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
       key: String,
       valueOption: Option[String],
       persisted: Boolean,
-      requiredRepliers: Set[ActorRef]
+      requiredReplies: Set[ActorRef]
   )
 
   extension (unsent: Unsent)
@@ -117,7 +120,7 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor:
         replicators = replicators - replicator
         for
           (id -> unsent) <- unsents
-          if unsent.requiredRepliers.contains(replicator)
+          if unsent.requiredReplies.contains(replicator)
         do
           unsents = unsents + (id -> unsent.recReply(replicator))
           ackAttempt(id)

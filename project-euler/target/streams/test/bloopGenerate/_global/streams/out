@@ -1,4 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0m[project-euler-test] Classpath dependencies List()[0m
-[0m[[0m[0mdebug[0m] [0m[0m[project-euler-test] Dependencies from configurations List(project-euler)[0m
-[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'project-euler-test' to '/Users/calvinkhor/Documents/GitHub/learning_scala/project-euler/.bloop/project-euler-test.json'[0m
-[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/project-euler-test.json[0m
