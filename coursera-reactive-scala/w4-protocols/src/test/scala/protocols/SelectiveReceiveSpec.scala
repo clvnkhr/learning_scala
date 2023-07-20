@@ -17,18 +17,20 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
   def expectOne[T](inbox: TestInbox[T], seq: List[T]): Behavior[T] =
     seq match
       case x :: xs =>
-        receiveMessagePartial {
-          case `x` =>
-            inbox.ref ! x
-            expectOne(inbox, xs)
+        receiveMessagePartial { case `x` =>
+          inbox.ref ! x
+          expectOne(inbox, xs)
         }
       case Nil => Behaviors.ignore
 
-  def expectStart[T](inbox: TestInbox[T], start: T, followUp: Behavior[T]): Behavior[T] =
-    receiveMessagePartial {
-      case x @ `start` =>
-        inbox.ref ! x
-        followUp
+  def expectStart[T](
+      inbox: TestInbox[T],
+      start: T,
+      followUp: Behavior[T]
+  ): Behavior[T] =
+    receiveMessagePartial { case x @ `start` =>
+      inbox.ref ! x
+      followUp
     }
 
   test("A SelectiveReceive Decorator must eventually execute the behavior") {
@@ -46,12 +48,17 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
       })
       val delivered = i.receiveAll()
       assertEquals(delivered, delivered.sorted)
-      values.foldLeft((passed, true)) { case ((prevProp, prev), v) =>
-        val contained = prev && list.contains(v)
-        val deliveredCount =
-          (delivered.count(_ == v) == (if contained then 1 else 0)) :| s"testing for $v when list=$list and delivered=$delivered: "
-        (prevProp && deliveredCount, contained)
-      }._1
+      values
+        .foldLeft((passed, true)) { case ((prevProp, prev), v) =>
+          val contained = prev && list.contains(v)
+          val deliveredCount =
+            (delivered.count(_ == v) == (if contained then 1
+                                         else
+                                           0
+            )) :| s"testing for $v when list=$list and delivered=$delivered: "
+          (prevProp && deliveredCount, contained)
+        }
+        ._1
     })
   }
 
@@ -76,8 +83,7 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
     try
       testkit.runOne()
       fail("StashOverflowException should have been thrown")
-    catch
-      case _: StashOverflowException => () // OK
+    catch case _: StashOverflowException => () // OK
   }
 
   test("A SelectiveReceive Decorator must overflow (size 1)") {
@@ -91,18 +97,22 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
     try
       testkit.runOne()
       fail("StashOverflowException should have been thrown")
-    catch
-      case _: StashOverflowException => () // OK
+    catch case _: StashOverflowException => () // OK
   }
 
   test("A SelectiveReceive Decorator must try in receive order") {
     val i = TestInbox[Int]()
-    val b = SelectiveReceive(2, expectStart(i, 0,
-      receiveMessage[Int] { t =>
-        i.ref ! t
-        same
-      }
-    ))
+    val b = SelectiveReceive(
+      2,
+      expectStart(
+        i,
+        0,
+        receiveMessage[Int] { t =>
+          i.ref ! t
+          same
+        }
+      )
+    )
     val testkit = BehaviorTestKit(b, "receive order")
     testkit.ref ! 1
     testkit.runOne()
@@ -114,19 +124,28 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
     assertEquals(i.receiveAll(), Seq(0, 1, 2))
   }
 
-  test("A SelectiveReceive Decorator must restart retrying at the head of the queue") {
+  test(
+    "A SelectiveReceive Decorator must restart retrying at the head of the queue"
+  ) {
     // hint: only the first parameter list participates in equality checking
     case class Msg(cls: Int)(val value: Int)
 
     val i = TestInbox[Msg]()
-    val b = SelectiveReceive(3,
-      expectStart(i, Msg(0)(0),
-        expectStart(i, Msg(1)(0),
+    val b = SelectiveReceive(
+      3,
+      expectStart(
+        i,
+        Msg(0)(0),
+        expectStart(
+          i,
+          Msg(1)(0),
           receiveMessage[Msg] { t =>
             i.ref ! t
             same
           }
-        )))
+        )
+      )
+    )
     val testkit = BehaviorTestKit(b, "receive order")
     testkit.ref ! Msg(2)(2)
     testkit.runOne()
@@ -140,16 +159,28 @@ trait SelectiveReceiveSpec { self: munit.FunSuite =>
     assertEquals(i.receiveAll().map(_.value), Seq(0, 1, 2, 3))
   }
 
-  test("A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled") {
+  test(
+    "A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled"
+  ) {
     val i = TestInbox[Char]()
-    val b = SelectiveReceive(1, expectStart(i, 'a', expectStart(i, 'a', expectStart(i, 'z', Behaviors.ignore))))
+    val b = SelectiveReceive(
+      1,
+      expectStart(
+        i,
+        'a',
+        expectStart(i, 'a', expectStart(i, 'z', Behaviors.ignore))
+      )
+    )
     val testkit = BehaviorTestKit(b)
     testkit.ref ! 'z'
     testkit.runOne()
     assertEquals(i.receiveAll(), Seq()) // “z” has been stashed
     testkit.ref ! 'a'
     testkit.runOne()
-    assertEquals(i.receiveAll(), Seq('a')) // “a” has been handled, and “z” has been stashed again
+    assertEquals(
+      i.receiveAll(),
+      Seq('a')
+    ) // “a” has been handled, and “z” has been stashed again
     testkit.ref ! 'a'
     testkit.runOne()
     // “a” and the initial “z” have been handled
