@@ -80,7 +80,11 @@ object Transactor:
       case (ctx, Begin(replyTo)) =>
         val child = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set()))
         ctx.watchWith(child, RolledBack(child))
-        // ctx.scheduleOnce(sessionTimeout, child, Rollback())
+        ctx.scheduleOnce(sessionTimeout, child, Rollback())
+        // NOTE: Somehow I pass with this above line, and without?
+        // shouldn't I need to explicitly shut down the child actor?
+        // and why doesn't it work with only the top line and not the below?
+        // Is there too much delay?
         ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(child))
         replyTo ! child
         inSession(value, sessionTimeout, child)
