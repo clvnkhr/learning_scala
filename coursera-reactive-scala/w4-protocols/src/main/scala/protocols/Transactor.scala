@@ -79,8 +79,9 @@ object Transactor:
     Behaviors.receive({
       case (ctx, Begin(replyTo)) =>
         val child = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set()))
-        ctx.watch(child)
-        ctx.scheduleOnce(sessionTimeout, child, Rollback())
+        ctx.watchWith(child, RolledBack(child))
+        // ctx.scheduleOnce(sessionTimeout, child, Rollback())
+        ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(child))
         replyTo ! child
         inSession(value, sessionTimeout, child)
       case _ => Behaviors.same
@@ -109,11 +110,11 @@ object Transactor:
       .receive({
         case (ctx, Begin(replyTo)) => Behaviors.unhandled
         case (ctx, Committed(session, value)) =>
-          idle(value, sessionTimeout)
+          if session == sessionRef then idle(value, sessionTimeout)
+          else Behaviors.same
         case (ctx, RolledBack(session)) =>
-          idle(rollbackValue, sessionTimeout)
-        case (ctx, Terminated(child)) =>
-          idle(rollbackValue, sessionTimeout)
+          if session == sessionRef then idle(rollbackValue, sessionTimeout)
+          else Behaviors.same
       })
 
   /** @return
@@ -137,7 +138,14 @@ object Transactor:
         val newValue = f(currentValue)
         replyTo ! newValue
         Behaviors.same
-      catch case _: Exception => Behaviors.stopped
+      catch
+        case _: Exception =>
+          //   ctx.self ! Rollback()
+          //   I think there's a problem with this:
+          //   it just adds the message to the queue,
+          //   which might process e.g. a commit in the meantime.
+          //   I should instead short-circuit that.
+          Behaviors.stopped
     case (ctx, Modify(f, id, reply, replyTo)) =>
       try
         if !done.contains(id)
@@ -153,5 +161,6 @@ object Transactor:
       commit ! Committed(ctx.self, currentValue)
       replyTo ! reply
       Behaviors.stopped
-    case (ctx, Rollback()) => Behaviors.stopped
+    case (ctx, Rollback()) =>
+      Behaviors.stopped
   }
