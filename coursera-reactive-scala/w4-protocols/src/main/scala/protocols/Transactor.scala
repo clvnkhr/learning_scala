@@ -43,9 +43,9 @@ object Transactor:
     *   session
     */
   def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] =
-    val initialBehavior = idle(value, sessionTimeout).narrow[Command[T]]
-    // narrow wasn't in the course, I don't think
-    SelectiveReceive(30, initialBehavior)
+    // val initialBehavior = idle(value, sessionTimeout).narrow[Command[T]]
+    // narrow wasn't in the course, I don't think. The type annotation is not needed below:
+    SelectiveReceive(30, idle(value, sessionTimeout).narrow)
 
   /** @return
     *   A behavior that defines how to react to any [[PrivateCommand]] when the
@@ -78,16 +78,11 @@ object Transactor:
   ): Behavior[PrivateCommand[T]] =
     Behaviors.receive({
       case (ctx, Begin(replyTo)) =>
-        val child = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set()))
-        ctx.watchWith(child, RolledBack(child))
-        ctx.scheduleOnce(sessionTimeout, child, Rollback())
-        // NOTE: Somehow I pass with this above line, and without?
-        // shouldn't I need to explicitly shut down the child actor?
-        // and why doesn't it work with only the top line and not the below?
-        // Is there too much delay?
-        ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(child))
-        replyTo ! child
-        inSession(value, sessionTimeout, child)
+        val session = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set()))
+        ctx.watchWith(session, RolledBack(session))
+        ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(session))
+        replyTo ! session
+        inSession(value, sessionTimeout, session)
       case _ => Behaviors.same
     })
 
@@ -111,15 +106,15 @@ object Transactor:
       sessionRef: ActorRef[Session[T]]
   ): Behavior[PrivateCommand[T]] =
     Behaviors
-      .receive({
+      .receive {
         case (ctx, Begin(replyTo)) => Behaviors.unhandled
         case (ctx, Committed(session, value)) =>
           if session == sessionRef then idle(value, sessionTimeout)
           else Behaviors.same
         case (ctx, RolledBack(session)) =>
-          if session == sessionRef then idle(rollbackValue, sessionTimeout)
-          else Behaviors.same
-      })
+          ctx.stop(session) // thanks GPT.
+          idle(rollbackValue, sessionTimeout)
+      }
 
   /** @return
     *   A behavior handling [[Session]] messages. See in the instructions the
@@ -138,33 +133,23 @@ object Transactor:
       done: Set[Long]
   ): Behavior[Session[T]] = Behaviors.receive[Session[T]] {
     case (ctx, Extract(f, replyTo)) =>
-      try
+      replyTo ! f(currentValue)
+      // if the above raises an exception, then deathwatch will inform the parent
+      Behaviors.same
+    case (_, Modify(f, id, reply, replyTo)) =>
+      if !done.contains(id)
+      then
         val newValue = f(currentValue)
-        replyTo ! newValue
+        // if the above raises an exception, then deathwatch will inform the parent
+        replyTo ! reply
+        sessionHandler(newValue, commit, done + id)
+      else
+        replyTo ! reply
         Behaviors.same
-      catch
-        case _: Exception =>
-          //   ctx.self ! Rollback()
-          //   I think there's a problem with this:
-          //   it just adds the message to the queue,
-          //   which might process e.g. a commit in the meantime.
-          //   I should instead short-circuit that.
-          Behaviors.stopped
-    case (ctx, Modify(f, id, reply, replyTo)) =>
-      try
-        if !done.contains(id)
-        then
-          val newValue = f(currentValue)
-          replyTo ! reply
-          sessionHandler(newValue, commit, done + id)
-        else
-          replyTo ! reply
-          Behaviors.same
-      catch case _: Exception => Behaviors.stopped
     case (ctx, Commit(reply, replyTo)) =>
       commit ! Committed(ctx.self, currentValue)
       replyTo ! reply
       Behaviors.stopped
-    case (ctx, Rollback()) =>
+    case (_, Rollback()) =>
       Behaviors.stopped
   }

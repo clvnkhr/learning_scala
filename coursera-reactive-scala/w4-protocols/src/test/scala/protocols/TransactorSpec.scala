@@ -25,11 +25,11 @@ trait TransactorSpec { self: munit.FunSuite =>
     }
     val extract = Gen.const(Extract[Int, Int](identity, i.ref))
     val map = Gen.oneOf(
-      Gen.zip(arbitrary[Int], serial).map {
-        case(x, id) => Modify[Int, String](x + _, id, s"add $x", done.ref)
+      Gen.zip(arbitrary[Int], serial).map { case (x, id) =>
+        Modify[Int, String](x + _, id, s"add $x", done.ref)
       },
-      Gen.zip(arbitrary[Int], serial).map {
-        case(x, id) => Modify[Int, String](x * _, id, s"times $x", done.ref)
+      Gen.zip(arbitrary[Int], serial).map { case (x, id) =>
+        Modify[Int, String](x * _, id, s"times $x", done.ref)
       }
     )
     val op = Gen.oneOf(extract, map)
@@ -74,7 +74,10 @@ trait TransactorSpec { self: munit.FunSuite =>
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs = sessionInbox.receiveAll()
-    assert(refs.size == 1, "A session should be created upon reception of a `Begin` message")
+    assert(
+      refs.size == 1,
+      "A session should be created upon reception of a `Begin` message"
+    )
     val ref = refs.head
     val effects = testkit.retrieveAllEffects()
     assert(
@@ -86,7 +89,10 @@ trait TransactorSpec { self: munit.FunSuite =>
       "The actor handling the session should be watched with a `RolledBack` message"
     )
     assert(
-      effects.exists { case Effect.Scheduled(`sessionTimeout`, _, RolledBack(`ref`)) => true case _ => false },
+      effects.exists {
+        case Effect.Scheduled(`sessionTimeout`, _, RolledBack(`ref`)) => true
+        case _                                                        => false
+      },
       "In case of timeout, the session should be rolled back"
     )
     assertEquals(ref, testkit.childInbox(ref.path.name).ref)
@@ -108,7 +114,10 @@ trait TransactorSpec { self: munit.FunSuite =>
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs2 = sessionInbox.receiveAll()
-    assert(refs2.size == 1, "A session should be created upon reception of the `Begin` message")
+    assert(
+      refs2.size == 1,
+      "A session should be created upon reception of the `Begin` message"
+    )
     val ref2 = refs2.head
     assertEquals(ref2, testkit.childInbox(ref2.path.name).ref)
     val session2 = testkit.childTestKit(ref2)
@@ -123,14 +132,20 @@ trait TransactorSpec { self: munit.FunSuite =>
     val done = TestInbox[String]()
 
     val start = 1
-    val testkit = BehaviorTestKit(Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]])
+    val testkit = BehaviorTestKit(
+      Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]]
+    )
 
     val sessionInbox = TestInbox[ActorRef[Session[Int]]]()
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs = sessionInbox.receiveAll()
-    assert(refs.size == 1, "A session should be created upon reception of a `Begin` message")
-    testkit.retrieveAllEffects() // Clear effects produced by the session creation
+    assert(
+      refs.size == 1,
+      "A session should be created upon reception of a `Begin` message"
+    )
+    testkit
+      .retrieveAllEffects() // Clear effects produced by the session creation
     val ref = refs.head
     assertEquals(ref, testkit.childInbox(ref.path.name).ref)
     val session = testkit.childTestKit(ref)
@@ -144,16 +159,25 @@ trait TransactorSpec { self: munit.FunSuite =>
     session.ref ! Extract((x: Int) => x.toString, done.ref)
     session.runOne()
     assertEquals(done.receiveAll(), Nil)
-
-    assertEquals(testkit.selfInbox().receiveAll(), Nil)
+    val messages = testkit.selfInbox().receiveAll()
+    assertEquals(messages, Nil)
     testkit.ref ! RolledBack(ref)
     testkit.runOne()
-    assertEquals(testkit.retrieveAllEffects(), Seq(Effects.stopped(ref.path.name)))
+    val effects = testkit.retrieveAllEffects()
+    println("printing effects:")
+    effects.map(println)
+    assertEquals(
+      effects,
+      Seq(Effects.stopped(ref.path.name))
+    )
 
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs2 = sessionInbox.receiveAll()
-    assert(refs2.size == 1, "A session should be created upon reception of the `Begin` message")
+    assert(
+      refs2.size == 1,
+      "A session should be created upon reception of the `Begin` message"
+    )
     val ref2 = refs2.head
     assertEquals(ref2, testkit.childInbox(ref2.path.name).ref)
     val session2 = testkit.childTestKit(ref2)
@@ -168,13 +192,18 @@ trait TransactorSpec { self: munit.FunSuite =>
     val done = TestInbox[String]()
 
     val start = 1
-    val testkit = BehaviorTestKit(Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]])
+    val testkit = BehaviorTestKit(
+      Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]]
+    )
 
     val sessionInbox = TestInbox[ActorRef[Session[Int]]]()
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs = sessionInbox.receiveAll()
-    assert(refs.size == 1, "A session should be created upon reception of the `Begin` message")
+    assert(
+      refs.size == 1,
+      "A session should be created upon reception of the `Begin` message"
+    )
     val ref = refs.head
     testkit.retrieveAllEffects()
     assertEquals(ref, testkit.childInbox(ref.path.name).ref)
@@ -186,17 +215,28 @@ trait TransactorSpec { self: munit.FunSuite =>
 
     testkit.ref ! RolledBack(ref)
     testkit.runOne()
-    assertEquals(testkit.retrieveAllEffects(), Seq(Effects.stopped(ref.path.name)))
+    val effects = testkit.retrieveAllEffects()
+    println(s"effects=$effects")
+    assertEquals(
+      effects,
+      Seq(Effects.stopped(ref.path.name))
+    )
 
     // session child actor should be terminated now
     session.ref ! Extract((x: Int) => x.toString, done.ref)
     session.runOne()
-    assertEquals(done.receiveAll(), Seq("2")) // BehaviorTestKit does not actually stop the child
+    assertEquals(
+      done.receiveAll(),
+      Seq("2")
+    ) // BehaviorTestKit does not actually stop the child
 
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs2 = sessionInbox.receiveAll()
-    assert(refs2.size == 1, "A session should be created upon reception of the `Begin` message")
+    assert(
+      refs2.size == 1,
+      "A session should be created upon reception of the `Begin` message"
+    )
     val ref2 = refs2.head
     assertEquals(ref2, testkit.childInbox(ref2.path.name).ref)
     val session2 = testkit.childTestKit(ref2)
@@ -209,25 +249,37 @@ trait TransactorSpec { self: munit.FunSuite =>
 
   test("A Transactor must ignore new sessions while in a session") {
     val start = 1
-    val testkit = BehaviorTestKit(Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]])
+    val testkit = BehaviorTestKit(
+      Transactor(start, 3.seconds).asInstanceOf[Behavior[PrivateCommand[Int]]]
+    )
 
     val sessionInbox = TestInbox[ActorRef[Session[Int]]]()
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
     val refs = sessionInbox.receiveAll()
-    assert(refs.size == 1, "A session should be created upon reception of a `Begin` message")
+    assert(
+      refs.size == 1,
+      "A session should be created upon reception of a `Begin` message"
+    )
     val ref = refs.head
     assertEquals(ref, testkit.childInbox(ref.path.name).ref)
 
     testkit.ref ! Begin(sessionInbox.ref)
     testkit.runOne()
-    assertEquals(sessionInbox.receiveAll(), Nil, "New sessions should not be created while in a session")
+    assertEquals(
+      sessionInbox.receiveAll(),
+      Nil,
+      "New sessions should not be created while in a session"
+    )
 
     testkit.ref ! RolledBack(ref)
     testkit.runOne()
 
     val refs2 = sessionInbox.receiveAll()
-    assert(refs2.size == 1, "New sessions should eventually be created after the current session is terminated")
+    assert(
+      refs2.size == 1,
+      "New sessions should eventually be created after the current session is terminated"
+    )
     val ref2 = refs2.head
     assertEquals(ref2, testkit.childInbox(ref2.path.name).ref)
   }
@@ -261,7 +313,9 @@ trait TransactorSpec { self: munit.FunSuite =>
     val sessionMock = TestInbox[Session[Int]]()
     val testkit = BehaviorTestKit(Transactor(0, 3.seconds))
     (1 to 31).foreach(_ => {
-      testkit.ref.unsafeUpcast[PrivateCommand[Int]] ! RolledBack(sessionMock.ref)
+      testkit.ref.unsafeUpcast[PrivateCommand[Int]] ! RolledBack(
+        sessionMock.ref
+      )
       testkit.runOne()
     })
   }
