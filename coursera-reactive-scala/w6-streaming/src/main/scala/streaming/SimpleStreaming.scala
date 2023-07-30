@@ -2,6 +2,7 @@ package streaming
 
 import akka.NotUsed
 import akka.stream.Materializer
+import akka.event.Logging._
 import akka.stream.scaladsl.{Flow, Sink, Source}
 import scala.concurrent.Future
 
@@ -15,11 +16,11 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
 
   /** Change each of the streamed elements to their String values */
   def mapToStrings(ints: Source[Int, NotUsed]): Source[String, NotUsed] =
-    ???
+    ints.map(_.toString)
 
   /** Filter elements which are even (use the modulo operator: `%`) */
   def filterEvenValues: Flow[Int, Int, NotUsed] =
-    ???
+    Flow[Int].filter(_ % 2 == 0)
 
   /** Rather than re-using operations as `operation(source): Source`, let's
     * re-use the previously built Flow[Int, Int].
@@ -30,7 +31,7 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
   def filterUsingPreviousFilterFlowAndMapToStrings(
       ints: Source[Int, NotUsed]
   ): Source[String, NotUsed] =
-    ???
+    mapToStrings(ints.via(filterEvenValues))
 
   /** You likely noticed that the `via` composition style reads more nicely
     * since it is possible to read it from left to right the same way the
@@ -43,14 +44,14 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
       ints: Source[Int, NotUsed],
       toString: Flow[Int, String, _]
   ): Source[String, NotUsed] =
-    ???
+    ints.via(filterEvenValues).via(toString)
 
   /** You can also "trim" a stream, by taking a number of elements (or by
     * predicate). In this method, take the first element only -- the stream
     * should be then completed once the first element has arrived.
     */
   def firstElementSource(ints: Source[Int, NotUsed]): Source[Int, NotUsed] =
-    ???
+    ints.take(1)
 
   /** This time we will actually *run* the stream. Hint: This is also the first
     * time we will use an "Materialized Value"; Look at Sink.head's type
@@ -61,14 +62,14 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
   def firstElementFuture(ints: Source[Int, NotUsed])(using
       Materializer
   ): Future[Int] =
-    ???
+    ints.take(1).runWith(Sink.head)
 
   // --- failure handling ---
 
   /** Recover [[IllegalStateException]] values to a -1 value
     */
   def recoverSingleElement(ints: Source[Int, NotUsed]): Source[Int, NotUsed] =
-    ???
+    ints.recover { case e: IllegalStateException => -1 }
 
   /** Recover [[IllegalStateException]] values to the provided fallback Source
     */
@@ -76,7 +77,7 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
       ints: Source[Int, NotUsed],
       fallback: Source[Int, NotUsed]
   ): Source[Int, NotUsed] =
-    ???
+    ints.recoverWithRetries(100, { case e: IllegalStateException => fallback })
 
   // working with rate
 
@@ -96,7 +97,10 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
     * `.logAllEvents` on the Flow you are returning here
     */
   def sumUntilBackpressureGoesAway: Flow[Int, Int, _] =
-    ???
+    Flow[Int]
+      // .logAllEvents("debug") // WARN: I'm informed that something is wrong with SLF4J?
+      // .batch(100L, identity)(_ + _)
+      .conflate(_ + _) // NOTE: batching also works.
 
   /** A faster downstream wants to consume elements, yet the upstream is slow at
     * providing them. Provide a Flow that is able to extrapolate "invent" values
@@ -111,4 +115,4 @@ object SimpleStreaming extends ExtraStreamOps with SimpleStreamingInterface:
     * See also [[Iterator.continually]]
     */
   def keepRepeatingLastObservedValue: Flow[Int, Int, _] =
-    ???
+    Flow[Int].expand(Iterator.continually(_))
