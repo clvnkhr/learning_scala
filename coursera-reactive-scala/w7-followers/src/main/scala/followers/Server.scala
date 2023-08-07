@@ -43,7 +43,7 @@ object Server extends ServerModuleInterface:
     * Hint: you may find the [[Framing]] flows useful.
     */
   val reframedFlow: Flow[ByteString, String, NotUsed] =
-    unimplementedFlow
+    Framing.delimiter(ByteString('\n'), 4096, false).map(_.utf8String)
 
   /** A flow that consumes chunks of bytes and produces [[Event]] messages.
     *
@@ -55,7 +55,7 @@ object Server extends ServerModuleInterface:
     * Hint: reuse `reframedFlow`
     */
   val eventParserFlow: Flow[ByteString, Event, NotUsed] =
-    unimplementedFlow
+    reframedFlow.map(Event.parse)
 
   /** Implement a Sink that will look for the first [[Identity]] (we expect
     * there will be only one), from a stream of commands and materializes a
@@ -68,7 +68,7 @@ object Server extends ServerModuleInterface:
     * `Keep.right`).
     */
   val identityParserSink: Sink[ByteString, Future[Identity]] =
-    unimplementedSink
+    reframedFlow.map(Identity.parse).toMat(Sink.head)(Keep.right)
 
   /** A flow that consumes unordered messages and produces messages ordered by
     * `sequenceNr`.
@@ -84,7 +84,26 @@ object Server extends ServerModuleInterface:
     * for this operation around in the operator.
     */
   val reintroduceOrdering: Flow[Event, Event, NotUsed] =
-    unimplementedFlow
+    given Ordering[Event] = Ordering.by(_.sequenceNr)
+
+    Flow[Event].statefulMapConcat(() =>
+      var buffer = SortedSet[Event]()
+      var expected = 1
+      event =>
+        if event.sequenceNr == expected then
+          expected = expected + 1
+          val output: SortedSet[Event] = buffer
+            .takeWhile(bufferedEvent => {
+              if bufferedEvent.sequenceNr == expected then {
+                expected = expected + 1; true
+              } else false
+            }) + event
+          buffer = buffer -- output
+          output
+        else
+          buffer = buffer + event
+          Nil
+    )
 
   /** A flow that associates a state of [[Followers]] to each incoming
     * [[Event]].
