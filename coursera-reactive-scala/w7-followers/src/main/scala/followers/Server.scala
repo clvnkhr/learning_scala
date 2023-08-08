@@ -176,7 +176,8 @@ class Server(using ExecutionContext, Materializer)
     *   1. A `Sink` that consumes events data, 2. and a `Source` of decoded
     *      events paired with the state of followers.
     */
-  val (inboundSink, broadcastOut) =
+  val (inboundSink, broadcastOut) = {
+
     /** A flow that consumes the event source, re-frames it, decodes the events,
       * re-orders them, and builds a Map of followers at each point it time. It
       * produces a stream of the decoded events associated with the current
@@ -195,6 +196,7 @@ class Server(using ExecutionContext, Materializer)
           .logLevels(Logging.DebugLevel, Logging.DebugLevel, Logging.DebugLevel)
       )
       .run()
+  }
 
   /** The "final form" of the event flow.
     *
@@ -211,7 +213,7 @@ class Server(using ExecutionContext, Materializer)
     * `Flow.fromSinkAndSourceCoupled` to find how to achieve that.
     */
   val eventsFlow: Flow[ByteString, Nothing, NotUsed] =
-    unimplementedFlow
+    Flow.fromSinkAndSourceCoupled(inboundSink, Source.maybe)
 
   /** @return
     *   The source of events for the given user
