@@ -145,7 +145,7 @@ object Server extends ServerModuleInterface:
       case (Broadcast(_), _)               => true
       case (PrivateMsg(_, _, toUserId), _) => userId == toUserId
       case (StatusUpdate(_, fromUserId), followers) =>
-        followers(userId).contains(fromUserId)
+        followers.getOrElse(userId, Set()).contains(fromUserId)
 
   // Utilities to temporarily have unimplemented parts of the program
   private def unimplementedFlow[A, B, C]: Flow[A, B, C] =
@@ -184,7 +184,7 @@ class Server(using ExecutionContext, Materializer)
       * state of the followers Map.
       */
     val incomingDataFlow: Flow[ByteString, (Event, Followers), NotUsed] =
-      Server.eventParserFlow.via(Server.reintroduceOrdering).via(followersFlow)
+      eventParserFlow.via(reintroduceOrdering).via(followersFlow)
 
     // Wires the MergeHub and the BroadcastHub together and runs the graph
     MergeHub
@@ -228,7 +228,7 @@ class Server(using ExecutionContext, Materializer)
     * current followers of the From User ID should be notified
     */
   def outgoingFlow(userId: Int): Source[ByteString, NotUsed] =
-    ???
+    broadcastOut.filter(isNotified(userId)).map((event, _) => event.render)
 
   /** The "final form" of the client flow.
     *
@@ -257,7 +257,9 @@ class Server(using ExecutionContext, Materializer)
 
     // A sink that parses the client identity and completes `clientIdPromise` with it
     val incoming: Sink[ByteString, NotUsed] =
-      ???
+      identityParserSink.mapMaterializedValue(fid => {
+        clientIdPromise.completeWith(fid); NotUsed
+      })
 
     val outgoing = Source.futureSource(clientIdPromise.future.map { identity =>
       outgoingFlow(identity.userId)
