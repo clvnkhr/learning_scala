@@ -113,7 +113,21 @@ object Server extends ServerModuleInterface:
     *   - you may find the `statefulMapConcat` operation useful.
     */
   val followersFlow: Flow[Event, (Event, Followers), NotUsed] =
-    unimplementedFlow
+    Flow[Event].statefulMapConcat(() =>
+      var followers: Followers = Map[Int, Set[Int]]()
+
+      event =>
+        event match
+          case Follow(_, toUserId, fromUserId) =>
+            val olds = followers.getOrElse(toUserId, Set.empty)
+            followers = followers + (toUserId -> (olds + fromUserId))
+
+          case Unfollow(_, toUserId, fromUserId) =>
+            val olds = followers.getOrElse(toUserId, Set.empty)
+            followers = followers + (toUserId -> (olds - fromUserId))
+          case _ => ()
+        (event, followers) :: Nil
+    )
 
   /** @return
     *   Whether the given user should be notified by the incoming `Event`, given
@@ -169,7 +183,7 @@ class Server(using ExecutionContext, Materializer)
       * state of the followers Map.
       */
     val incomingDataFlow: Flow[ByteString, (Event, Followers), NotUsed] =
-      unimplementedFlow
+      Server.eventParserFlow.via(Server.reintroduceOrdering).via(followersFlow)
 
     // Wires the MergeHub and the BroadcastHub together and runs the graph
     MergeHub
